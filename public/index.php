@@ -25,7 +25,9 @@ if (class_exists('Dotenv\Dotenv')) {
 date_default_timezone_set($_ENV['APP_TIMEZONE'] ?? 'Africa/Gaborone');
 
 // Start session
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Error handling
 if ($_ENV['APP_DEBUG'] ?? false) {

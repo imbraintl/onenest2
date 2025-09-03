@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $title = 'My Dashboard - OneNest';
 $topBarMessage = 'Welcome back, ' . ($_SESSION['user_name'] ?? 'User') . '!';
 
