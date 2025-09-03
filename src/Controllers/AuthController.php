@@ -89,13 +89,22 @@ class AuthController
         }
 
         // Create user
-        $userId = User::create([
-            'name' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'password' => $password,
-            'role_flags' => ['user']
-        ]);
+        try {
+            $userId = User::create([
+                'name' => $name,
+                'email' => $email,
+                'phone' => !empty($phone) ? $phone : null,
+                'password' => $password,
+                'role_flags' => ['user'],
+                'is_agent' => false
+            ]);
+        } catch (Exception $e) {
+            error_log('User creation failed: ' . $e->getMessage());
+            $referer = $_SERVER['HTTP_REFERER'] ?? '/';
+            $separator = strpos($referer, '?') !== false ? '&' : '?';
+            header('Location: ' . $referer . $separator . 'errors=' . urlencode('Registration failed. Please try again.'));
+            return;
+        }
 
         // Start session and store user data
         session_start();

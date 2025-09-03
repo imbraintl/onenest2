@@ -78,6 +78,13 @@ class Database
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['updated_at'] = date('Y-m-d H:i:s');
         
+        // Clean up empty values that might cause MySQL issues
+        foreach ($data as $key => $value) {
+            if ($value === '') {
+                $data[$key] = null;
+            }
+        }
+        
         $columns = implode(',', array_keys($data));
         $placeholders = ':' . implode(', :', array_keys($data));
         

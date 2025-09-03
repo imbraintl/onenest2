@@ -29,8 +29,8 @@ class User
             $data['role_flags'] = json_encode(['user']);
         }
         
-        // Set default values for boolean fields
-        $data['is_agent'] = $data['is_agent'] ?? false;
+        // Set default values for boolean fields - convert to integer for MySQL
+        $data['is_agent'] = isset($data['is_agent']) ? (int)(bool)$data['is_agent'] : 0;
         
         return Database::insert('users', $data);
     }
