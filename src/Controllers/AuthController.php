@@ -36,8 +36,7 @@ class AuthController
         $user = User::findByEmail($email);
         
         if (!$user || !User::verifyPassword($password, $user['password'])) {
-            $error = 'Invalid email or password';
-            include __DIR__ . '/../../views/auth/login.php';
+            header('Location: /?page=page-login&error=' . urlencode('Invalid email or password'));
             return;
         }
 
@@ -83,7 +82,7 @@ class AuthController
         }
 
         if (!empty($errors)) {
-            include __DIR__ . '/../../views/auth/register.php';
+            header('Location: /?page=page-join&errors=' . urlencode(implode(',', $errors)));
             return;
         }
 

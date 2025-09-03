@@ -45,6 +45,7 @@ $router = new Router();
 
 // Public routes
 $router->get('/', [HomeController::class, 'index']);
+$router->get('/home', [HomeController::class, 'index']);
 $router->get('/about', [HomeController::class, 'about']);
 $router->get('/contact', [HomeController::class, 'contact']);
 $router->get('/how-it-works', [HomeController::class, 'howItWorks']);

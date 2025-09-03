@@ -12,10 +12,16 @@ class HomeController
     public function index(): void
     {
         // Get featured content for homepage
-        $featuredBusinesses = Business::getAll(['status' => 'approved', 'limit' => 6]);
-        $featuredItems = MarketplaceItem::getAll(['status' => 'approved', 'limit' => 6]);
-        $featuredProperties = Property::getAll(['status' => 'approved', 'limit' => 6]);
-        $featuredJobs = JobPost::getAll(['status' => 'open', 'limit' => 6]);
+        $featuredBusinesses = [];
+        $featuredItems = [];
+        
+        // Try to get featured content, but don't fail if database isn't set up yet
+        try {
+            $featuredBusinesses = Business::getAll(['status' => 'approved', 'limit' => 6]);
+            $featuredItems = MarketplaceItem::getAll(['status' => 'approved', 'limit' => 6]);
+        } catch (Exception $e) {
+            // Database not set up yet, use empty arrays
+        }
 
         include __DIR__ . '/../../views/home.php';
     }

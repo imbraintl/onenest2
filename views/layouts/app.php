@@ -66,8 +66,8 @@
                         <a href="/dashboard/user" class="btn btn-secondary">Dashboard</a>
                         <a href="/logout" class="btn btn-primary">Logout</a>
                     <?php else: ?>
-                        <a href="/login" class="btn btn-secondary">Login</a>
-                        <a href="/register" class="btn btn-primary">Join Now</a>
+                        <a class="btn btn-secondary" data-page="page-login">Login</a>
+                        <a class="btn btn-primary" data-page="page-join">Join Now</a>
                     <?php endif; ?>
                 </div>
                 <button class="mobile-menu-toggle" title="Toggle mobile menu">
