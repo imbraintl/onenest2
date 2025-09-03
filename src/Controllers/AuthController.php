@@ -82,7 +82,9 @@ class AuthController
         }
 
         if (!empty($errors)) {
-            header('Location: /?page=page-join&errors=' . urlencode(implode(',', $errors)));
+            $referer = $_SERVER['HTTP_REFERER'] ?? '/';
+            $separator = strpos($referer, '?') !== false ? '&' : '?';
+            header('Location: ' . $referer . $separator . 'errors=' . urlencode(implode(',', $errors)));
             return;
         }
 

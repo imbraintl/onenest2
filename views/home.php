@@ -17,7 +17,7 @@ ob_start();
                     <h1 class="hero-title">The Trusted Local Marketplace</h1>
                     <p class="hero-subtitle">Connecting verified professionals, goods, and businesses across Botswana. Safe, secure, and simple.</p>
                     <div class="hero-cta">
-                        <a class="btn btn-accent btn-large" data-page="page-join">Get Started Today</a>
+                        <a class="btn btn-accent btn-large" href="#" onclick="showRegisterModal()">Get Started Today</a>
                         <a class="learn-more-link" href="/how-it-works">
                             Learn More <i data-lucide="arrow-right" class="icon-small"></i>
                         </a>
@@ -142,90 +142,7 @@ ob_start();
             <div class="container">
                 <h2>Ready to Join a Trusted Motswana Community?</h2>
                 <p>Become a member today and start connecting with confidence.</p>
-                <a class="btn btn-accent btn-large" data-page="page-join">Create Your Free Account</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======================= -->
-    <!--        LOGIN PAGE         -->
-    <!-- ======================= -->
-    <section id="page-login" class="page">
-        <div class="auth-container">
-            <div class="auth-card">
-                <h1>Welcome Back</h1>
-                
-                <?php if (isset($_GET['error'])): ?>
-                    <div style="background: #fee; color: #c33; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                        <?= htmlspecialchars($_GET['error']) ?>
-                    </div>
-                <?php endif; ?>
-                
-                <form method="POST" action="/login">
-                    <div class="form-group">
-                        <label for="login-email">Email Address</label>
-                        <input type="email" id="login-email" name="email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" id="login-password" name="password" class="form-input" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-                <div class="auth-link">
-                    <a href="#" onclick="showPage('page-home')">Forgot Password?</a>
-                </div>
-                <div class="auth-link">
-                    Don't have an account? <a href="#" data-page="page-join">Join Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ======================= -->
-    <!--       JOIN NOW PAGE       -->
-    <!-- ======================= -->
-    <section id="page-join" class="page">
-        <div class="auth-container">
-            <div class="auth-card">
-                <h1>Join Mummycare</h1>
-                
-                <?php if (isset($_GET['errors'])): ?>
-                    <div style="background: #fee; color: #c33; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                        <ul style="margin: 0; padding-left: 20px;">
-                            <?php foreach (explode(',', $_GET['errors']) as $error): ?>
-                                <li><?= htmlspecialchars($error) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                <?php endif; ?>
-                
-                <form method="POST" action="/register">
-                    <div class="form-group">
-                        <label for="join-name">Full Name</label>
-                        <input type="text" id="join-name" name="name" class="form-input" required placeholder="Your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="join-email">Email Address</label>
-                        <input type="email" id="join-email" name="email" class="form-input" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="join-phone">Phone Number (Optional)</label>
-                        <input type="tel" id="join-phone" name="phone" class="form-input" placeholder="e.g., 71234567">
-                    </div>
-                    <div class="form-group">
-                        <label for="join-password">Create Password</label>
-                        <input type="password" id="join-password" name="password" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="join-confirm-password">Confirm Password</label>
-                        <input type="password" id="join-confirm-password" name="confirm_password" class="form-input" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Create Account</button>
-                </form>
-                <div class="auth-link">
-                    Already have an account? <a href="#" data-page="page-login">Login</a>
-                </div>
+                <a class="btn btn-accent btn-large" href="#" onclick="showRegisterModal()">Create Your Free Account</a>
             </div>
         </div>
     </section>
