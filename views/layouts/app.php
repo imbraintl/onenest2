@@ -81,6 +81,91 @@
         <?= $content ?>
     </main>
 
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <?php if (isset($_GET['error'])): ?>
+                    <div style="background: #fee; color: #c33; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <?= htmlspecialchars($_GET['error']) ?>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="POST" action="/login">
+                    <div class="form-group">
+                        <label for="modal-login-email">Email Address</label>
+                        <input type="email" id="modal-login-email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-login-password">Password</label>
+                        <input type="password" id="modal-login-password" name="password" class="form-input" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                
+                <div class="auth-link">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                </div>
+                <div class="auth-link">
+                    Don't have an account? <a href="#" onclick="switchToRegister()">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Join Mummycare</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <?php if (isset($_GET['errors'])): ?>
+                    <div style="background: #fee; color: #c33; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <?php foreach (explode(',', $_GET['errors']) as $error): ?>
+                                <li><?= htmlspecialchars($error) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="POST" action="/register">
+                    <div class="form-group">
+                        <label for="modal-join-name">Full Name</label>
+                        <input type="text" id="modal-join-name" name="name" class="form-input" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-join-email">Email Address</label>
+                        <input type="email" id="modal-join-email" name="email" class="form-input" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-join-phone">Phone Number (Optional)</label>
+                        <input type="tel" id="modal-join-phone" name="phone" class="form-input" placeholder="e.g., 71234567">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-join-password">Create Password</label>
+                        <input type="password" id="modal-join-password" name="password" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-join-confirm-password">Confirm Password</label>
+                        <input type="password" id="modal-join-confirm-password" name="confirm_password" class="form-input" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+                
+                <div class="auth-link">
+                    Already have an account? <a href="#" onclick="switchToLogin()">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -183,6 +268,85 @@
             });
 
             window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+    
+    <!-- Modal JavaScript -->
+    <script>
+        // Modal functionality
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        
+        // Show login modal
+        function showLoginModal() {
+            loginModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Show register modal
+        function showRegisterModal() {
+            registerModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Close modals
+        function closeModals() {
+            loginModal.style.display = 'none';
+            registerModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Switch between modals
+        function switchToRegister() {
+            closeModals();
+            showRegisterModal();
+        }
+        
+        function switchToLogin() {
+            closeModals();
+            showLoginModal();
+        }
+        
+        // Add event listeners for login/register buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle login buttons
+            document.querySelectorAll('a[data-page="page-login"], .btn-secondary').forEach(btn => {
+                if (btn.textContent.trim() === 'Login') {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        showLoginModal();
+                    });
+                }
+            });
+            
+            // Handle register buttons
+            document.querySelectorAll('a[data-page="page-join"], .btn-primary').forEach(btn => {
+                if (btn.textContent.trim() === 'Join Now' || btn.textContent.trim() === 'Get Started Today' || btn.textContent.trim() === 'Create Your Free Account') {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        showRegisterModal();
+                    });
+                }
+            });
+            
+            // Close modal when clicking X or outside
+            document.querySelectorAll('.modal-close').forEach(closeBtn => {
+                closeBtn.addEventListener('click', closeModals);
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    closeModals();
+                }
+            });
+            
+            // Handle escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeModals();
+                }
+            });
         });
     </script>
     
