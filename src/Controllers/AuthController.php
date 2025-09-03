@@ -90,28 +90,6 @@ class AuthController
 
         // Create user
         $userId = User::create([
-            'name' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'password' => $password,
-            'role_flags' => ['user'] // Default role
-        ]);
-
-        // Create profile
-        Database::insert('profiles', [
-            'user_id' => $userId
-        ]);
-
-        // Auto login
-        session_start();
-        $_SESSION['user_id'] = $userId;
-        $_SESSION['user_name'] = $name;
-        $_SESSION['user_email'] = $email;
-        $_SESSION['role_flags'] = ['user'];
-
-        // Redirect to user dashboard
-        header('Location: /dashboard/user');
-        exit;
     }
 
     public function logout(): void

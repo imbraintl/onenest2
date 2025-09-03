@@ -69,15 +69,19 @@ class Database
 
     public static function insert(string $table, array $data): string
     {
-        $columns = implode(',', array_keys($data));
-        $placeholders = ':' . implode(', :', array_keys($data));
-        
-        $sql = "INSERT INTO {$table} ({$columns}) VALUES ({$placeholders})";
-        
         // Generate UUID if id not provided
         if (!isset($data['id'])) {
             $data['id'] = self::generateUuid();
         }
+        
+        // Add timestamps
+        $data['created_at'] = date('Y-m-d H:i:s');
+        $data['updated_at'] = date('Y-m-d H:i:s');
+        
+        $columns = implode(',', array_keys($data));
+        $placeholders = ':' . implode(', :', array_keys($data));
+        
+        $sql = "INSERT INTO {$table} ({$columns}) VALUES ({$placeholders})";
         
         self::query($sql, $data);
         return $data['id'];

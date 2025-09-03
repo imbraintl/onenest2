@@ -19,8 +19,18 @@ class User
 
     public static function create(array $data): string
     {
+        // Hash password
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-        $data['role_flags'] = json_encode($data['role_flags'] ?? []);
+        
+        // Handle role_flags as JSON
+        if (isset($data['role_flags']) && is_array($data['role_flags'])) {
+            $data['role_flags'] = json_encode($data['role_flags']);
+        } else {
+            $data['role_flags'] = json_encode(['user']);
+        }
+        
+        // Set default values for boolean fields
+        $data['is_agent'] = $data['is_agent'] ?? false;
         
         return Database::insert('users', $data);
     }
