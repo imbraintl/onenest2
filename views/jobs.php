@@ -48,6 +48,7 @@ ob_start();
         <?php if (!empty($jobs)): ?>
             <?php foreach ($jobs as $job): ?>
             <div class="card">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Job">
                 <div class="card-content">
                     <span class="card-tag" style="background-color: var(--secondary-color);">
                         <?= ucfirst(str_replace('_', ' ', $job['employment_type'])) ?>
@@ -77,10 +78,60 @@ ob_start();
             </div>
             <?php endforeach; ?>
         <?php else: ?>
-            <div style="text-align: center; padding: 60px 20px; grid-column: 1 / -1;">
-                <h3>No jobs found</h3>
-                <p>Check back soon for new opportunities!</p>
-                <a href="/register" class="btn btn-primary">Create Job Alert</a>
+            <!-- Sample jobs for demo -->
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nanny Job">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: var(--secondary-color); color: var(--primary-color);">Full-time</span>
+                    <h4 class="card-title">Live-in Nanny</h4>
+                    <p class="card-subtitle">Gaborone • Family of 2 children</p>
+                    <div style="margin: 10px 0;">
+                        <strong>Salary: </strong>P3,000 - P4,500/month
+                    </div>
+                    <div class="card-footer">
+                        <div class="rating">
+                            <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
+                            <span>Jan 15</span>
+                        </div>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cleaner Job">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: var(--secondary-color); color: var(--primary-color);">Part-time</span>
+                    <h4 class="card-title">Weekend Cleaner</h4>
+                    <p class="card-subtitle">Gaborone • Professional family</p>
+                    <div style="margin: 10px 0;">
+                        <strong>Rate: </strong>P150/hour
+                    </div>
+                    <div class="card-footer">
+                        <div class="rating">
+                            <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
+                            <span>Jan 14</span>
+                        </div>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Driver Job">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: var(--secondary-color); color: var(--primary-color);">Full-time</span>
+                    <h4 class="card-title">Family Driver</h4>
+                    <p class="card-subtitle">Gaborone • School runs & errands</p>
+                    <div style="margin: 10px 0;">
+                        <strong>Salary: </strong>P2,800/month
+                    </div>
+                    <div class="card-footer">
+                        <div class="rating">
+                            <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
+                            <span>Jan 13</span>
+                        </div>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">Apply Now</a>
+                    </div>
+                </div>
             </div>
         <?php endif; ?>
     </div>

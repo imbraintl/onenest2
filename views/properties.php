@@ -43,6 +43,7 @@ ob_start();
         <?php if (!empty($properties)): ?>
             <?php foreach ($properties as $property): ?>
             <div class="card">
+                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Property">
                 <div class="card-content">
                     <span class="card-tag" style="background-color: var(--secondary-color);">
                         <?= ucfirst(str_replace('_', ' ', $property['type'])) ?>
@@ -57,10 +58,42 @@ ob_start();
             </div>
             <?php endforeach; ?>
         <?php else: ?>
-            <div style="text-align: center; padding: 60px 20px; grid-column: 1 / -1;">
-                <h3>No properties found</h3>
-                <p>Be the first to list a property!</p>
-                <a href="/register" class="btn btn-primary">List Property</a>
+            <!-- Sample properties for demo -->
+            <div class="card">
+                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="House">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: #B2DFDB;">For Rent</span>
+                    <h4 class="card-title">3BR House - Gaborone West</h4>
+                    <p class="card-subtitle">Modern family home with garden</p>
+                    <div class="card-footer">
+                        <span class="price">P 8,500/month</span>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Apartment">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: #B2DFDB;">For Rent</span>
+                    <h4 class="card-title">2BR Apartment - Block 8</h4>
+                    <p class="card-subtitle">Secure complex with parking</p>
+                    <div class="card-footer">
+                        <span class="price">P 4,200/month</span>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800" alt="House for Sale">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: #B2DFDB;">For Sale</span>
+                    <h4 class="card-title">4BR House - Phakalane</h4>
+                    <p class="card-subtitle">Executive home in golf estate</p>
+                    <div class="card-footer">
+                        <span class="price">P 1,850,000</span>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">View Details</a>
+                    </div>
+                </div>
             </div>
         <?php endif; ?>
     </div>

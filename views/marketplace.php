@@ -33,6 +33,7 @@ ob_start();
         <?php if (!empty($items)): ?>
             <?php foreach ($items as $item): ?>
             <div class="card">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Product">
                 <div class="card-content">
                     <span class="card-tag" style="background-color: #E0F2F1;">
                         <?= htmlspecialchars($item['category_name'] ?? 'General') ?>
@@ -47,10 +48,42 @@ ob_start();
             </div>
             <?php endforeach; ?>
         <?php else: ?>
-            <div style="text-align: center; padding: 60px 20px; grid-column: 1 / -1;">
-                <h3>No items found</h3>
-                <p>Be the first to list an item!</p>
-                <a href="/register" class="btn btn-primary">Start Selling</a>
+            <!-- Sample marketplace items for demo -->
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Toyota Hilux">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: #E0F2F1;">Vehicles</span>
+                    <h4 class="card-title">2018 Toyota Hilux 2.8 GD-6</h4>
+                    <p class="card-subtitle">Excellent Condition - Gaborone</p>
+                    <div class="card-footer">
+                        <span class="price">P 350,000</span>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">View Listing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800" alt="iPhone">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: #E0F2F1;">Electronics</span>
+                    <h4 class="card-title">iPhone 12 Pro 128GB</h4>
+                    <p class="card-subtitle">Slightly Used - Francistown</p>
+                    <div class="card-footer">
+                        <span class="price">P 7,500</span>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">View Listing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Basket">
+                <div class="card-content">
+                    <span class="card-tag" style="background-color: #E0F2F1;">Local Crafts</span>
+                    <h4 class="card-title">Hand-woven Basket</h4>
+                    <p class="card-subtitle">Authentic from Maun</p>
+                    <div class="card-footer">
+                        <span class="price">P 450</span>
+                        <a class="btn btn-secondary" style="padding: 8px 16px;">View Listing</a>
+                    </div>
+                </div>
             </div>
         <?php endif; ?>
     </div>

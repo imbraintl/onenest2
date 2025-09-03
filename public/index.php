@@ -72,6 +72,7 @@ $router->get('/businesses', [HomeController::class, 'businesses']);
 $router->get('/marketplace', [HomeController::class, 'marketplace']);
 $router->get('/properties', [HomeController::class, 'properties']);
 $router->get('/jobs', [HomeController::class, 'jobs']);
+$router->get('/how-it-works', [HomeController::class, 'howItWorks']);
 
 try {
     $router->dispatch();
