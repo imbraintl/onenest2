@@ -38,8 +38,8 @@
                     </div>
                     <div class="top-bar-social">
                         <a href="#"><i data-lucide="facebook"></i></a>
-                        <a href="#"><i data-lucide="instagram"></i></a>
                         <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
                     </div>
                 </div>
             </div>
