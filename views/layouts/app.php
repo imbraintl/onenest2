@@ -55,15 +55,17 @@
                     OneNest
                 </a>
                 <ul class="nav-links">
-                    <li><a href="/jobs">Hire Professional</a></li>
+                    <li><a href="/jobs">Hire Pro</a></li>
                     <li><a href="/marketplace">Shop Goods</a></li>
                     <li><a href="/businesses">Find Businesses</a></li>
                     <li><a href="/properties">Properties</a></li>
                     <li><a href="/how-it-works">How It Works</a></li>
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <li><a href="/how-it-works">My Dashboard</a></li>
+                    <?php endif; ?>
                 </ul>
                 <div class="nav-actions">
                     <?php if (isset($_SESSION['user_id'])): ?>
-                        <a href="/dashboard/user" class="btn btn-secondary">Dashboard</a>
                         <a href="/logout" class="btn btn-primary">Logout</a>
                     <?php else: ?>
                         <a class="btn btn-secondary" data-page="page-login">Login</a>
