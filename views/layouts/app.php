@@ -29,7 +29,7 @@
                     </div>
                     <div class="top-bar-contact">
                         <i data-lucide="mail"></i>
-                        <span>hello@mummycare.co.bw</span>
+                        <span>hello@onenest.co.bw</span>
                     </div>
                 </div>
                 <div class="top-bar-right">

@@ -19,10 +19,10 @@ This implementation includes a root `index.php` that serves the application with
 
 3. **Create Database & Run Migrations:**
    ```sql
-   CREATE DATABASE mummycare;
+   CREATE DATABASE onenest;
    ```
    ```bash
-   mysql -u root -p mummycare < database/migrations/001_create_tables.sql
+   mysql -u root -p onenest < database/migrations/001_create_tables.sql
    ```
 
 4. **Set Permissions:**
@@ -32,14 +32,14 @@ This implementation includes a root `index.php` that serves the application with
    ```
 
 5. **Access Your Site:**
-   - Visit: `https://mummycare.ihostcp.com`
+   - Visit: `https://onenest.ihostcp.com`
    - The root `index.php` handles all routing automatically!
 
 ## 🔄 How the Routing Works
 
 ### Without Apache Config Changes:
 ```
-Request: https://mummycare.ihostcp.com/dashboard/user
+Request: https://onenest.ihostcp.com/dashboard/user
 ↓
 Root index.php: Detects this is not a static file
 ↓
@@ -52,7 +52,7 @@ View: Renders dashboard HTML
 
 ### Static Files (CSS, JS, Images):
 ```
-Request: https://mummycare.ihostcp.com/css/base.css
+Request: https://onenest.ihostcp.com/css/base.css
 ↓
 Root index.php: Detects static file extension
 ↓
@@ -62,7 +62,7 @@ Serves: public/css/base.css with proper headers
 ## 📁 Project Structure
 
 ```
-mummycare/
+onenest/
 ├── index.php              ← Root entry point (NEW)
 ├── composer.json          ← Dependencies
 ├── .env                   ← Configuration
@@ -114,47 +114,47 @@ The project now includes 7 comprehensive dashboard HTML files, each containing f
 
 ### Dashboard Files
 
-1. **`mummycare-service-providers-dashboard.html`**
+1. **`onenest-service-providers-dashboard.html`**
    - Business information registration
    - Contact details
    - Service details and pricing
    - Additional files upload
    - Complete sidebar navigation within single file
 
-2. **`mummycare-product-sellers-dashboard.html`**
+2. **`onenest-product-sellers-dashboard.html`**
    - Business information
    - Product categories and details
    - Contact information
    - Product photos upload
    - Additional files (catalogues, flyers)
 
-3. **`mummycare-property-owners-dashboard.html`**
+3. **`onenest-property-owners-dashboard.html`**
    - Property owner/agent information
    - Property type selection
    - Detailed property information
    - Photo submission
    - Additional property details
 
-4. **`mummycare-app-users-dashboard.html`**
+4. **`onenest-app-users-dashboard.html`**
    - Personal information
    - Location details
    - Family profile
    - Interests and preferences
    - Verification documents
 
-5. **`mummycare-job-seekers-dashboard.html`**
+5. **`onenest-job-seekers-dashboard.html`**
    - Job preferences (part-time/full-time, stay-in/out)
    - Availability and salary expectations
    - Location information
    - Portfolio photos (for maintenance freelancers)
 
-6. **`mummycare-recruiters-dashboard.html`**
+6. **`onenest-recruiters-dashboard.html`**
    - Company information
    - Job posting forms
    - Candidate management
    - Subscription management
 
-7. **`mummycare-freelancers-dashboard.html`**
+7. **`onenest-freelancers-dashboard.html`**
    - Service information and experience
    - Availability preferences
    - Portfolio and work samples

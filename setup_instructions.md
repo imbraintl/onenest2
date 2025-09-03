@@ -12,7 +12,7 @@ The "Forbidden" error occurs because:
 Your web server should point to the `public/` folder as the document root:
 
 ```
-/var/www/html/mummycare/
+/var/www/html/onenest/
 ├── composer.json
 ├── .env
 ├── config/
@@ -33,10 +33,10 @@ Edit your Apache virtual host configuration:
 
 ```apache
 <VirtualHost *:80>
-    ServerName mummycare.ihostcp.com
-    DocumentRoot /var/www/html/mummycare/public
+    ServerName onenest.ihostcp.com
+    DocumentRoot /var/www/html/onenest/public
     
-    <Directory /var/www/html/mummycare/public>
+    <Directory /var/www/html/onenest/public>
         AllowOverride All
         Require all granted
         DirectoryIndex index.php
@@ -65,18 +65,18 @@ mv public/.htaccess /var/www/html/
 
 ### 1. Install Dependencies
 ```bash
-cd /var/www/html/mummycare
+cd /var/www/html/onenest
 composer install
 ```
 
 ### 2. Set Permissions
 ```bash
 # Set proper ownership
-sudo chown -R www-data:www-data /var/www/html/mummycare
+sudo chown -R www-data:www-data /var/www/html/onenest
 
 # Set proper permissions
-sudo chmod -R 755 /var/www/html/mummycare
-sudo chmod -R 775 /var/www/html/mummycare/uploads
+sudo chmod -R 755 /var/www/html/onenest
+sudo chmod -R 775 /var/www/html/onenest/uploads
 ```
 
 ### 3. Configure Database
@@ -91,10 +91,10 @@ nano .env
 Update these values in `.env`:
 ```
 DB_HOST=localhost
-DB_DATABASE=mummycare
+DB_DATABASE=onenest
 DB_USERNAME=your_db_user
 DB_PASSWORD=your_db_password
-APP_URL=https://mummycare.ihostcp.com
+APP_URL=https://onenest.ihostcp.com
 ```
 
 ### 4. Create Database and Run Migrations
@@ -103,18 +103,18 @@ APP_URL=https://mummycare.ihostcp.com
 mysql -u root -p
 
 -- Create database
-CREATE DATABASE mummycare CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE onenest CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Create user (optional)
 CREATE USER 'mummycare_user'@'localhost' IDENTIFIED BY 'secure_password';
-GRANT ALL PRIVILEGES ON mummycare.* TO 'mummycare_user'@'localhost';
+GRANT ALL PRIVILEGES ON onenest.* TO 'mummycare_user'@'localhost';
 FLUSH PRIVILEGES;
 
 -- Exit MySQL
 EXIT;
 
 -- Run migrations
-mysql -u root -p mummycare < database/migrations/001_create_tables.sql
+mysql -u root -p onenest < database/migrations/001_create_tables.sql
 ```
 
 ### 5. Enable Apache Modules
@@ -135,7 +135,7 @@ sudo systemctl restart apache2
 
 ### Example Route Flow:
 ```
-URL: https://mummycare.ihostcp.com/dashboard/user
+URL: https://onenest.ihostcp.com/dashboard/user
 ↓
 Apache: Check if file exists → No
 ↓
@@ -163,14 +163,14 @@ Create `info.php` in your web root:
 
 ### Verify File Permissions:
 ```bash
-ls -la /var/www/html/mummycare/
+ls -la /var/www/html/onenest/
 ```
 
 ### Test Database Connection:
 ```php
 <?php
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=mummycare', 'username', 'password');
+    $pdo = new PDO('mysql:host=localhost;dbname=onenest', 'username', 'password');
     echo "Database connection successful!";
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();

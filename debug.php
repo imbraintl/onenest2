@@ -1,7 +1,7 @@
 <?php
 /**
  * Debug Script - Check what's happening with routing
- * Access: https://mummycare.ihostcp.com/debug.php
+ * Access: https://onenest.ihostcp.com/debug.php
  */
 
 echo "<h1>OneNest Debug Information</h1>";

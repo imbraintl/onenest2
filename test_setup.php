@@ -2,7 +2,7 @@
 /**
  * Test Setup Script
  * Run this file to verify your PHP/MySQL setup is working
- * Access: https://mummycare.ihostcp.com/test_setup.php
+ * Access: https://onenest.ihostcp.com/test_setup.php
  */
 
 echo "<h1>OneNest Setup Test</h1>";
@@ -46,12 +46,12 @@ if (file_exists(__DIR__ . '/.env')) {
             'mysql:host=%s;port=%s;dbname=%s;charset=utf8mb4',
             $env['DB_HOST'] ?? 'localhost',
             $env['DB_PORT'] ?? '3306',
-            $env['DB_DATABASE'] ?? 'mummycare'
+            $env['DB_DATABASE'] ?? 'onenest'
         );
         
         $pdo = new PDO($dsn, $env['DB_USERNAME'] ?? 'root', $env['DB_PASSWORD'] ?? '');
         echo "Database connection: ✅ Success<br>";
-        echo "Database: " . ($env['DB_DATABASE'] ?? 'mummycare') . "<br>";
+        echo "Database: " . ($env['DB_DATABASE'] ?? 'onenest') . "<br>";
         
         // Test if tables exist
         $stmt = $pdo->query("SHOW TABLES");
@@ -74,15 +74,15 @@ if (file_exists(__DIR__ . '/.env')) {
 echo "<br><h2>5. Next Steps</h2>";
 echo "<ol>";
 echo "<li>If all tests pass, delete this file: <code>rm test_setup.php</code></li>";
-echo "<li>Visit your site: <a href='/'>https://mummycare.ihostcp.com</a></li>";
+echo "<li>Visit your site: <a href='/'>https://onenest.ihostcp.com</a></li>";
 echo "<li>Register a new account to test the system</li>";
 echo "</ol>";
 
 echo "<br><h2>6. Troubleshooting</h2>";
 echo "<p>If you still get 'Forbidden' errors:</p>";
 echo "<ul>";
-echo "<li>Run: <code>chmod -R 755 /path/to/mummycare</code></li>";
-echo "<li>Run: <code>chown -R www-data:www-data /path/to/mummycare</code></li>";
+echo "<li>Run: <code>chmod -R 755 /path/to/onenest</code></li>";
+echo "<li>Run: <code>chown -R www-data:www-data /path/to/onenest</code></li>";
 echo "<li>Ensure Apache has <code>mod_rewrite</code> enabled</li>";
 echo "</ul>";
 

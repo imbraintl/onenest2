@@ -8,7 +8,7 @@ Apache is showing "Forbidden" because it can't access the files or doesn't know 
 ### 1. Set File Permissions
 ```bash
 # Navigate to your project directory
-cd /path/to/your/mummycare/project
+cd /path/to/your/onenest/project
 
 # Set proper permissions
 chmod -R 755 .
@@ -17,7 +17,7 @@ chmod 644 public/index.php
 ```
 
 ### 2. Test the Setup
-Visit: `https://mummycare.ihostcp.com/test_setup.php`
+Visit: `https://onenest.ihostcp.com/test_setup.php`
 
 This will check:
 - ✅ PHP version and extensions
@@ -45,9 +45,9 @@ echo "<br>Files in directory: " . implode(', ', scandir(__DIR__));
 **Option C: Check Directory Ownership**
 ```bash
 # Make sure Apache can read the files
-sudo chown -R www-data:www-data /path/to/mummycare
+sudo chown -R www-data:www-data /path/to/onenest
 # OR if using different user:
-sudo chown -R apache:apache /path/to/mummycare
+sudo chown -R apache:apache /path/to/onenest
 ```
 
 ## 🎯 **How the Routing Works**
@@ -60,7 +60,7 @@ sudo chown -R apache:apache /path/to/mummycare
 
 ### **Example Flow:**
 ```
-URL: https://mummycare.ihostcp.com/
+URL: https://onenest.ihostcp.com/
 ↓
 Root index.php: Not a static file, forward to public/index.php
 ↓
@@ -111,7 +111,7 @@ try {
 
 ## 🎉 **Once Working:**
 
-1. Visit: `https://mummycare.ihostcp.com`
+1. Visit: `https://onenest.ihostcp.com`
 2. You'll see the homepage with login/register forms
 3. Click "Login" or "Join Now" to test the forms
 4. Forms submit to PHP backend for processing
