@@ -25,7 +25,7 @@
                 <div class="top-bar-left">
                     <div class="top-bar-contact">
                         <i data-lucide="phone"></i>
-                        <span>+267 123 4567</span>
+                        <span>+267 7123 4567</span>
                     </div>
                     <div class="top-bar-contact">
                         <i data-lucide="mail"></i>
@@ -33,13 +33,13 @@
                     </div>
                 </div>
                 <div class="top-bar-right">
+                    <div class="top-bar-announcement">
+                        <?= $topBarMessage ?? 'Join 10,000+ verified members!' ?>
+                    </div>
                     <div class="top-bar-social">
                         <a href="#"><i data-lucide="facebook"></i></a>
                         <a href="#"><i data-lucide="instagram"></i></a>
                         <a href="#"><i data-lucide="twitter"></i></a>
-                    </div>
-                    <div class="top-bar-announcement">
-                        <?= $topBarMessage ?? 'Welcome to OneNest!' ?>
                     </div>
                 </div>
             </div>
