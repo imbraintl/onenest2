@@ -1,22 +1,37 @@
 <?php
 
+// Check if vendor directory exists
+if (!file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    die('Composer dependencies not installed. Please run: composer install');
+}
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 // Load environment variables
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
+if (class_exists('Dotenv\Dotenv')) {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+    $dotenv->safeLoad();
+}
 
 // Set timezone
 date_default_timezone_set($_ENV['APP_TIMEZONE'] ?? 'Africa/Gaborone');
+
+// Start session
+session_start();
+
+// Error handling
+if ($_ENV['APP_DEBUG'] ?? false) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+} else {
+    error_reporting(0);
+    ini_set('display_errors', 0);
+}
 
 use App\Core\Router;
 use App\Controllers\HomeController;
 use App\Controllers\AuthController;
 use App\Controllers\DashboardController;
-use App\Controllers\BusinessController;
-use App\Controllers\MarketplaceController;
-use App\Controllers\PropertyController;
-use App\Controllers\JobController;
 
 $router = new Router();
 
@@ -43,26 +58,20 @@ $router->get('/dashboard/property-agent', [DashboardController::class, 'property
 $router->get('/dashboard/seller', [DashboardController::class, 'sellerDashboard']);
 $router->get('/dashboard/admin', [DashboardController::class, 'adminDashboard']);
 
-// Business routes
-$router->get('/businesses', [BusinessController::class, 'index']);
-$router->get('/businesses/{id}', [BusinessController::class, 'show']);
+// Public listing routes (using HomeController for now)
+$router->get('/businesses', [HomeController::class, 'businesses']);
+$router->get('/marketplace', [HomeController::class, 'marketplace']);
+$router->get('/properties', [HomeController::class, 'properties']);
+$router->get('/jobs', [HomeController::class, 'jobs']);
 
-// Marketplace routes
-$router->get('/marketplace', [MarketplaceController::class, 'index']);
-$router->get('/marketplace/{id}', [MarketplaceController::class, 'show']);
-
-// Property routes
-$router->get('/properties', [PropertyController::class, 'index']);
-$router->get('/properties/{id}', [PropertyController::class, 'show']);
-
-// Job routes
-$router->get('/jobs', [JobController::class, 'index']);
-$router->get('/jobs/{id}', [JobController::class, 'show']);
-
-// API routes
-$router->get('/api/businesses', [BusinessController::class, 'apiIndex']);
-$router->get('/api/marketplace', [MarketplaceController::class, 'apiIndex']);
-$router->get('/api/properties', [PropertyController::class, 'apiIndex']);
-$router->get('/api/jobs', [JobController::class, 'apiIndex']);
-
-$router->dispatch();
+try {
+    $router->dispatch();
+} catch (Exception $e) {
+    if ($_ENV['APP_DEBUG'] ?? false) {
+        echo '<pre>Error: ' . $e->getMessage() . '</pre>';
+        echo '<pre>' . $e->getTraceAsString() . '</pre>';
+    } else {
+        http_response_code(500);
+        include __DIR__ . '/../views/errors/500.php';
+    }
+}

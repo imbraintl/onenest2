@@ -34,4 +34,28 @@ class HomeController
     {
         include __DIR__ . '/../../views/how-it-works.php';
     }
+
+    public function businesses(): void
+    {
+        $businesses = Business::getAll(['status' => 'approved', 'limit' => 20]);
+        include __DIR__ . '/../../views/businesses.php';
+    }
+
+    public function marketplace(): void
+    {
+        $items = MarketplaceItem::getAll(['status' => 'approved', 'limit' => 20]);
+        include __DIR__ . '/../../views/marketplace.php';
+    }
+
+    public function properties(): void
+    {
+        $properties = Property::getAll(['status' => 'approved', 'limit' => 20]);
+        include __DIR__ . '/../../views/properties.php';
+    }
+
+    public function jobs(): void
+    {
+        $jobs = JobPost::getAll(['status' => 'open', 'limit' => 20]);
+        include __DIR__ . '/../../views/jobs.php';
+    }
 }
