@@ -1,15 +1,23 @@
 <?php
 
 // Check if vendor directory exists
-if (!file_exists(__DIR__ . '/../vendor/autoload.php')) {
+$vendorPath = file_exists(__DIR__ . '/../vendor/autoload.php') 
+    ? __DIR__ . '/../vendor/autoload.php'
+    : __DIR__ . '/../../vendor/autoload.php'; // For root index.php setup
+
+if (!file_exists($vendorPath)) {
     die('Composer dependencies not installed. Please run: composer install');
 }
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once $vendorPath;
 
 // Load environment variables
 if (class_exists('Dotenv\Dotenv')) {
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+    $envPath = file_exists(__DIR__ . '/..') && file_exists(__DIR__ . '/../.env')
+        ? __DIR__ . '/..'
+        : __DIR__ . '/../..'; // For root index.php setup
+    
+    $dotenv = Dotenv\Dotenv::createImmutable($envPath);
     $dotenv->safeLoad();
 }
 

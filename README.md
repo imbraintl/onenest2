@@ -1,7 +1,82 @@
 # OneNest Botswana - CSS Structure & Mummycare Dashboards
 
-This project uses a modular CSS architecture with separated concerns for better maintainability and organization. It includes the main OneNest website and a comprehensive Mummycare dashboard system.
+This project is a complete PHP implementation of the Mummycare platform with MySQL database. It uses a modular CSS architecture and includes comprehensive dashboard systems for multiple user types.
 
+## 🚀 Quick Setup (No Apache Config Required)
+
+This implementation includes a root `index.php` that serves the application without needing to modify Apache's DocumentRoot:
+
+1. **Install Dependencies:**
+   ```bash
+   composer install
+   ```
+
+2. **Configure Database:**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your database credentials
+   ```
+
+3. **Create Database & Run Migrations:**
+   ```sql
+   CREATE DATABASE mummycare;
+   ```
+   ```bash
+   mysql -u root -p mummycare < database/migrations/001_create_tables.sql
+   ```
+
+4. **Set Permissions:**
+   ```bash
+   chmod -R 755 .
+   chmod -R 775 uploads/
+   ```
+
+5. **Access Your Site:**
+   - Visit: `https://mummycare.ihostcp.com`
+   - The root `index.php` handles all routing automatically!
+
+## 🔄 How the Routing Works
+
+### Without Apache Config Changes:
+```
+Request: https://mummycare.ihostcp.com/dashboard/user
+↓
+Root index.php: Detects this is not a static file
+↓
+Forwards to: public/index.php (the actual application)
+↓
+Router: Matches route → DashboardController::userDashboard()
+↓
+View: Renders dashboard HTML
+```
+
+### Static Files (CSS, JS, Images):
+```
+Request: https://mummycare.ihostcp.com/css/base.css
+↓
+Root index.php: Detects static file extension
+↓
+Serves: public/css/base.css with proper headers
+```
+
+## 📁 Project Structure
+
+```
+mummycare/
+├── index.php              ← Root entry point (NEW)
+├── composer.json          ← Dependencies
+├── .env                   ← Configuration
+├── database/migrations/   ← SQL schema
+├── src/
+│   ├── Core/             ← Database, Router
+│   ├── Models/           ← Data models
+│   └── Controllers/      ← Request handlers
+├── views/                ← HTML templates
+└── public/               ← Static assets + app entry
+    ├── index.php         ← Application entry point
+    ├── css/              ← Your existing CSS
+    └── .htaccess         ← URL rewriting (backup)
+```
 ## CSS File Structure
 
 ### `css/base.css`
