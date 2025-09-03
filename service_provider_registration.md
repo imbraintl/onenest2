@@ -1,6 +1,6 @@
-# Mummycare Partner Registration Form: Service Providers
+# OneNest Partner Registration Form: Service Providers
 
-Please complete the following form if you offer services and would like to register with the Mummycare App.
+Please complete the following form if you offer services and would like to register with the OneNest App.
 
 ## 1. BUSINESS INFORMATION
 - Business Name:

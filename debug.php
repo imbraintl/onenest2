@@ -4,7 +4,7 @@
  * Access: https://mummycare.ihostcp.com/debug.php
  */
 
-echo "<h1>Mummycare Debug Information</h1>";
+echo "<h1>OneNest Debug Information</h1>";
 
 // Test 1: Basic PHP
 echo "<h2>1. PHP Information</h2>";

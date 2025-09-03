@@ -1,4 +1,4 @@
--- Mummycare Database Schema
+-- OneNest Database Schema
 -- Run this file to create all necessary tables
 
 SET FOREIGN_KEY_CHECKS = 0;

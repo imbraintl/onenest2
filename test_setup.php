@@ -5,7 +5,7 @@
  * Access: https://mummycare.ihostcp.com/test_setup.php
  */
 
-echo "<h1>Mummycare Setup Test</h1>";
+echo "<h1>OneNest Setup Test</h1>";
 
 // Test 1: PHP Version
 echo "<h2>1. PHP Version</h2>";

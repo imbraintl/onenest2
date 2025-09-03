@@ -1,5 +1,5 @@
 <?php
-$title = 'How It Works - Mummycare';
+$title = 'How It Works - OneNest';
 
 ob_start();
 ?>
@@ -35,15 +35,15 @@ ob_start();
             <h2 class="section-title" style="margin-top: 80px; margin-bottom: 40px;">Frequently Asked Questions</h2>
             <div class="faq-item">
                 <h3>Why do I need to verify my ID?</h3>
-                <p>Verification is the cornerstone of trust on Mummycare. It ensures all members are real people, which drastically reduces scams and builds a safer community for everyone.</p>
+                <p>Verification is the cornerstone of trust on OneNest. It ensures all members are real people, which drastically reduces scams and builds a safer community for everyone.</p>
             </div>
             <div class="faq-item">
-                <h3>Is Mummycare free to use?</h3>
+                <h3>Is OneNest free to use?</h3>
                 <p>Yes, joining, browsing, and listing items is free for all members. We may introduce premium features for businesses or high-volume professionals in the future.</p>
             </div>
             <div class="faq-item">
                 <h3>How are payments handled?</h3>
-                <p>Currently, Mummycare facilitates the connection. Payment and delivery terms are arranged directly between the buyer and seller or the client and professional. Always follow safe transaction practices.</p>
+                <p>Currently, OneNest facilitates the connection. Payment and delivery terms are arranged directly between the buyer and seller or the client and professional. Always follow safe transaction practices.</p>
             </div>
         </div>
     </div>

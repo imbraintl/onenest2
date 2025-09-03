@@ -1,6 +1,6 @@
-Mummycare Partner Registration Form: Service Providers
+OneNest Partner Registration Form: Service Providers
 
-Please complete the following form if you offer services and would like to register with the Mummycare App.
+Please complete the following form if you offer services and would like to register with the OneNest App.
 
 1. BUSINESS INFORMATION
 	•	Business Name:
@@ -36,9 +36,9 @@ Attach any of the following (if available):
 
 ⸻
 
-📄 Mummycare Partner Registration Form: Product Sellers
+📄 OneNest Partner Registration Form: Product Sellers
 
-Please complete the following form if you sell physical products and would like to register with the Mummycare App.
+Please complete the following form if you sell physical products and would like to register with the OneNest App.
 
 1. BUSINESS INFORMATION
 	•	Business Name:
@@ -82,11 +82,11 @@ You may also attach:
 
 
 
-Mummycare Marketplace Seller Questionnaire
+OneNest Marketplace Seller Questionnaire
 
 Dear Seller,
 
-Thank you for your interest in listing your products on the Mummycare App.
+Thank you for your interest in listing your products on the OneNest App.
 Please complete the following form with accurate details about the goods you wish to sell.
 Be sure to attach clear, high-quality photos for each product listed.
 
@@ -126,13 +126,13 @@ You may copy and reuse this section for multiple items.
 	•	Would you be interested in promotions or featuring your products at events/fairs?
 	•	Any other information you’d like us to know?
 
-Mummycare Property Listing Questionnaire
+OneNest Property Listing Questionnaire
 
 (For Rentals & Property Sales)
 
 Dear Property Owner/Agent,
 
-Thank you for choosing to list your property on the Mummycare App.
+Thank you for choosing to list your property on the OneNest App.
 Please fill out the form below with detailed and accurate information. Attach clear photos of the property, including rooms, exterior, and key features.
 
 ⸻
@@ -207,9 +207,9 @@ Additional questions
 8.if you are a freelancer of maintenance services attach photos of previous work,
 9.list jobs you are interested in eg nanny, cleaner, babysitter, yard cleaner, housekeeper, old age caretaker etc
 
-👤 Mummycare App User Profile Questionnaire
+👤 OneNest App User Profile Questionnaire
 
-Welcome to Mummycare — where families connect to trusted childcare, home services, businesses, and more!
+Welcome to OneNest — where families connect to trusted childcare, home services, businesses, and more!
 Please fill in your details below so we can personalize your experience.
 
 ⸻
@@ -299,7 +299,7 @@ Users of the app have these categories
 
 
 
-Mummycare App – Suggested User Categories & Features Overview
+OneNest App – Suggested User Categories & Features Overview
 
 🔹 1. Hire a Professional
 
@@ -330,7 +330,7 @@ Includes:
 	•	Clothes, shoes, toys, electronics, furniture, etc.
 Kids & baby products (toys, clothing, accessories)
 	•	Household items
-	•	Mummycare branded goods
+	•	OneNest branded goods
 	•	Wellness & beauty items
 	•	Stationery, handmade items,machinery, etc.
 

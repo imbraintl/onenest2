@@ -1,6 +1,6 @@
 <?php
 /**
- * Mummycare – All‑in‑One Laravel File (Migrations + Models + FormRequests)
+ * OneNest – All‑in‑One Laravel File (Migrations + Models + FormRequests)
  * ---------------------------------------------------------------
  * Single PHP file containing:
  *  - One big Migration that creates all tables

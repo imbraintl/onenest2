@@ -1,7 +1,7 @@
-# Mummycare Dashboard System - Complete User Types & Implementation Status
+# OneNest Dashboard System - Complete User Types & Implementation Status
 
 ## Overview
-The Mummycare platform serves multiple user types, each with specific needs and dashboard requirements. This document outlines all user categories and their corresponding dashboard implementations.
+The OneNest platform serves multiple user types, each with specific needs and dashboard requirements. This document outlines all user categories and their corresponding dashboard implementations.
 
 ---
 
@@ -155,7 +155,7 @@ The Mummycare platform serves multiple user types, each with specific needs and 
 - **Existing `components.css`** for cards and shared components
 
 ### **Design Consistency:**
-- Mummycare brand colors and typography
+- OneNest brand colors and typography
 - Consistent navigation patterns
 - Mobile-responsive sidebar system
 - Lucide icons throughout
@@ -205,4 +205,4 @@ The Mummycare platform serves multiple user types, each with specific needs and 
 - **Business Owners:** Free registration, paid promotions/ads
 - **Property Owners:** Free listings, optional promotional features
 
-This comprehensive dashboard system will provide each user type with the tools they need while supporting Mummycare's business model and revenue streams.
+This comprehensive dashboard system will provide each user type with the tools they need while supporting OneNest's business model and revenue streams.

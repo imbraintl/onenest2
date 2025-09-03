@@ -1,12 +1,12 @@
 <?php
-$title = 'Join Mummycare - Create Account';
+$title = 'Join OneNest - Create Account';
 
 ob_start();
 ?>
 
 <div class="auth-container">
     <div class="auth-card">
-        <h1>Join Mummycare</h1>
+        <h1>Join OneNest</h1>
         
         <?php if (isset($errors) && !empty($errors)): ?>
             <div style="background: #fee; color: #c33; padding: 15px; border-radius: 8px; margin-bottom: 20px;">

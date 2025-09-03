@@ -1,8 +1,8 @@
-# Mummycare App – User Categories & Features Overview
+# OneNest App – User Categories & Features Overview
 
 ## User Categories
 
-The Mummycare app serves the following user categories:
+The OneNest app serves the following user categories:
 
 1. **The marketplace for second hand products** - paid on commission of price of product
 2. **Property listers** - They can list property on the app; agents subscribe for access to direct contact to listers - paid commission (1000 prepay commission units)
@@ -41,7 +41,7 @@ The Mummycare app serves the following user categories:
 - Clothes, shoes, toys, electronics, furniture, etc.
 - Kids & baby products (toys, clothing, accessories)
 - Household items
-- Mummycare branded goods
+- OneNest branded goods
 - Wellness & beauty items
 - Stationery, handmade items, machinery, etc.
 

@@ -1,5 +1,5 @@
 <?php
-$title = 'Shop Goods - Mummycare';
+$title = 'Shop Goods - OneNest';
 
 ob_start();
 ?>

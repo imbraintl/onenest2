@@ -1,8 +1,8 @@
-# Mummycare Marketplace Seller Questionnaire
+# OneNest Marketplace Seller Questionnaire
 
 Dear Seller,
 
-Thank you for your interest in listing your products on the Mummycare App.
+Thank you for your interest in listing your products on the OneNest App.
 Please complete the following form with accurate details about the goods you wish to sell.
 Be sure to attach clear, high-quality photos for each product listed.
 

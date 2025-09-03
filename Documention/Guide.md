@@ -1,4 +1,4 @@
-# Mummycare App – Developer Specification (Laravel + MySQL)
+# OneNest App – Developer Specification (Laravel + MySQL)
 
 This document turns the raw requirements into a clean, dev‑ready plan for a Laravel + MySQL build. It includes data model, forms → database mapping, endpoints, validation, and dashboard structure. Payments and full in‑app chat are **out of scope** for v1 (per request). Minimal contact actions (call/WhatsApp/email templates) are included.
 

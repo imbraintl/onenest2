@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = 'My Dashboard - Mummycare';
+$title = 'My Dashboard - OneNest';
 $topBarMessage = 'Welcome back, ' . ($_SESSION['user_name'] ?? 'User') . '!';
 
 ob_start();
@@ -18,7 +18,7 @@ ob_start();
         <div class="sidebar-header">
             <div class="logo">
                 <i data-lucide="heart"></i>
-                My Mummycare
+                My OneNest
             </div>
         </div>
         
@@ -99,7 +99,7 @@ ob_start();
     <main class="dashboard-main">
         <div class="dashboard-header">
             <h1 class="dashboard-title">Welcome back, <?= htmlspecialchars($_SESSION['user_name'] ?? 'User') ?>!</h1>
-            <p class="dashboard-subtitle">Here's what's happening with your Mummycare account</p>
+            <p class="dashboard-subtitle">Here's what's happening with your OneNest account</p>
         </div>
 
         <!-- Quick Stats -->
@@ -210,7 +210,7 @@ ob_start();
                         </div>
                         <div class="flex-1">
                             <strong>Account created</strong><br>
-                            <small>Welcome to Mummycare!</small>
+                            <small>Welcome to OneNest!</small>
                         </div>
                         <div class="text-right">
                             <small>3 days ago</small>

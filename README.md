@@ -1,6 +1,6 @@
-# OneNest Botswana - CSS Structure & Mummycare Dashboards
+# OneNest Botswana - CSS Structure & OneNest Dashboards
 
-This project is a complete PHP implementation of the Mummycare platform with MySQL database. It uses a modular CSS architecture and includes comprehensive dashboard systems for multiple user types.
+This project is a complete PHP implementation of the OneNest platform with MySQL database. It uses a modular CSS architecture and includes comprehensive dashboard systems for multiple user types.
 
 ## 🚀 Quick Setup (No Apache Config Required)
 
@@ -108,7 +108,7 @@ Contains reusable component styles:
 - Dashboard components (cards, progress bars, forms)
 - Component-specific responsive design
 
-## Mummycare Dashboard System
+## OneNest Dashboard System
 
 The project now includes 7 comprehensive dashboard HTML files, each containing full functionality for a specific user type:
 

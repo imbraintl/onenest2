@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?? 'Mummycare - Trusted Local Marketplace' ?></title>
+    <title><?= $title ?? 'OneNest - Trusted Local Marketplace' ?></title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
                         <a href="#"><i data-lucide="twitter"></i></a>
                     </div>
                     <div class="top-bar-announcement">
-                        <?= $topBarMessage ?? 'Welcome to Mummycare!' ?>
+                        <?= $topBarMessage ?? 'Welcome to OneNest!' ?>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
             <nav class="navbar">
                 <a href="/" class="logo">
                     <i data-lucide="heart"></i>
-                    Mummycare
+                    OneNest
                 </a>
                 <ul class="nav-links">
                     <li><a href="/jobs">Hire Professional</a></li>
@@ -121,7 +121,7 @@
     <div id="registerModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Join Mummycare</h2>
+                <h2>Join OneNest</h2>
                 <span class="modal-close">&times;</span>
             </div>
             <div class="modal-body">
@@ -172,7 +172,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a class="logo" href="/">
-                        <i data-lucide="heart"></i> Mummycare
+                        <i data-lucide="heart"></i> OneNest
                     </a>
                     <p>Trusted Local Marketplace for Botswana</p>
                     <div class="social-links">
@@ -208,7 +208,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Mummycare. All rights reserved.</p>
+                <p>&copy; 2024 OneNest. All rights reserved.</p>
             </div>
         </div>
     </footer>

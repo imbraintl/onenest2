@@ -1,4 +1,4 @@
-# Mummycare PHP Setup Instructions
+# OneNest PHP Setup Instructions
 
 ## 🚨 **Fixing the "Forbidden" Error**
 
@@ -189,4 +189,4 @@ try {
 - [ ] Apache `mod_rewrite` enabled
 - [ ] PHP extensions enabled (PDO, MySQL)
 
-Once these steps are completed, your Mummycare platform should be accessible and fully functional!
+Once these steps are completed, your OneNest platform should be accessible and fully functional!
