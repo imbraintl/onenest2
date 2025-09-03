@@ -61,7 +61,7 @@
                     <li><a href="/properties">Properties</a></li>
                     <li><a href="/how-it-works">How It Works</a></li>
                     <?php if (isset($_SESSION['user_id'])): ?>
-                        <li><a href="/how-it-works">My Dashboard</a></li>
+                        <li><a href="/dashboard/user">My Dashboard</a></li>
                     <?php endif; ?>
                 </ul>
                 <div class="nav-actions">
