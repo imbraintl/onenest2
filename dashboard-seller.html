@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Seller Dashboard - Mummycare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <div class="top-bar-contact">
+                        <i data-lucide="phone"></i>
+                        <span>+267 123 4567</span>
+                    </div>
+                    <div class="top-bar-contact">
+                        <i data-lucide="mail"></i>
+                        <span>hello@mummycare.co.bw</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                    <div class="top-bar-announcement">
+                        Seller Portal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header header-with-topbar">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i data-lucide="heart"></i>
+                    Mummycare
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard-seller.html" class="active">My Dashboard</a></li>
+                    <li><a href="shop-goods.html">Marketplace</a></li>
+                    <li><a href="#">My Products</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-secondary">Logout</a>
+                </div>
+                <button class="mobile-menu-toggle" title="Toggle mobile menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle" title="Toggle sidebar menu">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="shopping-bag"></i>
+                    My Store
+                </div>
+            </div>
+            
+            <div class="sidebar-user-info">
+                <div class="user-avatar">GT</div>
+                <div class="user-details">
+                    <h4>Grace Tebogo</h4>
+                    <p>Marketplace Seller</p>
+                    <div class="d-flex align-items-center mt-1">
+                        <div style="display: flex; gap: 2px; margin-right: 5px;">
+                            <i data-lucide="star" style="width: 12px; height: 12px; fill: #FFC107; color: #FFC107;"></i>
+                            <i data-lucide="star" style="width: 12px; height: 12px; fill: #FFC107; color: #FFC107;"></i>
+                            <i data-lucide="star" style="width: 12px; height: 12px; fill: #FFC107; color: #FFC107;"></i>
+                            <i data-lucide="star" style="width: 12px; height: 12px; fill: #FFC107; color: #FFC107;"></i>
+                            <i data-lucide="star" style="width: 12px; height: 12px; fill: #ccc; color: #ccc;"></i>
+                        </div>
+                        <small>4.2 (15 sales)</small>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">My Store</div>
+                    <a href="#overview" class="nav-item active">
+                        <i data-lucide="home"></i>
+                        Overview
+                    </a>
+                    <a href="#profile" class="nav-item">
+                        <i data-lucide="user"></i>
+                        Seller Profile
+                    </a>
+                    <a href="#products" class="nav-item">
+                        <i data-lucide="package"></i>
+                        My Products
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Sales</div>
+                    <a href="#pending" class="nav-item">
+                        <i data-lucide="clock"></i>
+                        Pending Approval
+                        <span class="badge badge-warning" style="margin-left: auto;">2</span>
+                    </a>
+                    <a href="#active" class="nav-item">
+                        <i data-lucide="eye"></i>
+                        Active Listings
+                    </a>
+                    <a href="#sold" class="nav-item">
+                        <i data-lucide="check-circle"></i>
+                        Sold Items
+                    </a>
+                    <a href="#inquiries" class="nav-item">
+                        <i data-lucide="help-circle"></i>
+                        Customer Inquiries
+                        <span class="badge badge-info" style="margin-left: auto;">3</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Financial</div>
+                    <a href="#earnings" class="nav-item">
+                        <i data-lucide="dollar-sign"></i>
+                        My Earnings
+                    </a>
+                    <a href="#commission" class="nav-item">
+                        <i data-lucide="percent"></i>
+                        Commission Details
+                    </a>
+                    <a href="#payout" class="nav-item">
+                        <i data-lucide="credit-card"></i>
+                        Payout History
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Communication</div>
+                    <a href="#messages" class="nav-item">
+                        <i data-lucide="message-circle"></i>
+                        Messages
+                        <span class="badge badge-warning" style="margin-left: auto;">4</span>
+                    </a>
+                    <a href="#reviews" class="nav-item">
+                        <i data-lucide="star"></i>
+                        Reviews & Feedback
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Welcome back, Grace!</h1>
+                <p class="dashboard-subtitle">Manage your products, track sales, and grow your marketplace presence</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon primary">
+                            <i data-lucide="package"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Active Listings</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon success">
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">P2,340</div>
+                    <div class="stat-label">Total Earnings</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon warning">
+                            <i data-lucide="clock"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Pending Approval</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon info">
+                            <i data-lucide="eye"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">Profile Views</div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Quick Actions</h3>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <button class="btn btn-accent" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="plus" style="width: 24px; height: 24px;"></i>
+                            <span>List New Product</span>
+                        </button>
+                        <button class="btn btn-primary" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="camera" style="width: 24px; height: 24px;"></i>
+                            <span>Update Photos</span>
+                        </button>
+                        <button class="btn btn-secondary" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="edit" style="width: 24px; height: 24px;"></i>
+                            <span>Edit Listings</span>
+                        </button>
+                        <button class="btn btn-success" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="share-2" style="width: 24px; height: 24px;"></i>
+                            <span>Promote Items</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Products -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">My Recent Products</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-accent btn-small">
+                            <i data-lucide="plus"></i>
+                            Add Product
+                        </button>
+                        <button class="btn btn-secondary btn-small">
+                            <i data-lucide="bar-chart"></i>
+                            View Analytics
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="table-container">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Views</th>
+                                    <th>Inquiries</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Product" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>Kids Wooden Toy Set</strong><br>
+                                                <small>Educational building blocks</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Toys</td>
+                                    <td>P450</td>
+                                    <td>34</td>
+                                    <td>7</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">Edit</button>
+                                            <button class="btn btn-secondary btn-small" title="View product">
+                                                <i data-lucide="eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Product" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>Baby High Chair</strong><br>
+                                                <small>Adjustable, excellent condition</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Baby Products</td>
+                                    <td>P320</td>
+                                    <td>28</td>
+                                    <td>5</td>
+                                    <td><span class="badge badge-warning">Pending</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">Edit</button>
+                                            <button class="btn btn-secondary btn-small" title="View product">
+                                                <i data-lucide="eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Product" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>School Uniform Set</strong><br>
+                                                <small>Size 10, like new</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Clothing</td>
+                                    <td>P180</td>
+                                    <td>45</td>
+                                    <td>12</td>
+                                    <td><span class="badge badge-info">Sold</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-secondary btn-small">View Sale</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Product" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>Kitchen Appliance Set</strong><br>
+                                                <small>Microwave, kettle, toaster</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Household</td>
+                                    <td>P850</td>
+                                    <td>67</td>
+                                    <td>15</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">Edit</button>
+                                            <button class="btn btn-secondary btn-small" title="View product">
+                                                <i data-lucide="eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Performance -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Sales Performance</h3>
+                    <button class="btn btn-secondary btn-small">Detailed Report</button>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                        <div style="background: linear-gradient(135deg, var(--success-color), #45a049); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Total Sales</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">P2,340</div>
+                            <small style="opacity: 0.9;">15 items sold</small>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Commission Paid</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">P234</div>
+                            <small style="opacity: 0.9;">10% marketplace fee</small>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, var(--accent-color), #00a794); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Net Earnings</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">P2,106</div>
+                            <small style="opacity: 0.9;">After commission</small>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, var(--warning-color), #e68900); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Average Rating</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">4.2</div>
+                            <small style="opacity: 0.9;">Based on 15 reviews</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Customer Messages -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Customer Inquiries</h3>
+                    <button class="btn btn-secondary btn-small">View All Messages</button>
+                </div>
+                <div class="card-content">
+                    <div class="activity-list">
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">SM</div>
+                            <div class="flex-1">
+                                <strong>Sarah Mokgwebi</strong><br>
+                                <small>"Hi! Is the wooden toy set still available? Can I see more photos?"</small>
+                                <div style="margin-top: 5px;">
+                                    <span style="background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">Kids Wooden Toy Set</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <small>2 hours ago</small><br>
+                                <span class="badge badge-warning">Unread</span>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">TM</div>
+                            <div class="flex-1">
+                                <strong>Thabo Mmusi</strong><br>
+                                <small>"Great seller! The school uniform was exactly as described. Thank you!"</small>
+                                <div style="margin-top: 5px;">
+                                    <span style="background: #e8f5e8; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; color: #4CAF50;">Review</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <small>1 day ago</small><br>
+                                <span class="badge badge-success">Read</span>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">LK</div>
+                            <div class="flex-1">
+                                <strong>Lerato Kgosana</strong><br>
+                                <small>"Can you deliver the kitchen appliances to Gaborone North? What's the delivery fee?"</small>
+                                <div style="margin-top: 5px;">
+                                    <span style="background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">Kitchen Appliance Set</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <small>2 days ago</small><br>
+                                <span class="badge badge-warning">Unread</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips for Success -->
+            <div class="dashboard-card" style="background: linear-gradient(135deg, var(--accent-color), var(--primary-color)); color: white;">
+                <div class="card-content">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon" style="background: rgba(255,255,255,0.2); margin-right: 20px;">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 style="color: white; margin-bottom: 10px;">Tips for Better Sales</h3>
+                            <ul style="margin-bottom: 20px; opacity: 0.9; list-style: none; padding: 0;">
+                                <li style="margin-bottom: 5px;">✓ Upload clear, well-lit photos from multiple angles</li>
+                                <li style="margin-bottom: 5px;">✓ Write detailed, honest descriptions</li>
+                                <li style="margin-bottom: 5px;">✓ Respond to inquiries quickly</li>
+                                <li style="margin-bottom: 5px;">✓ Offer competitive prices</li>
+                            </ul>
+                            <button class="btn" style="background: white; color: var(--primary-color);">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+        const sidebar = document.querySelector('.dashboard-sidebar');
+        
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar.classList.toggle('mobile-active');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992 && 
+                !sidebar.contains(e.target) && 
+                !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('mobile-active');
+            }
+        });
+
+        // Mobile menu toggle for main navigation
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-active');
+        });
+    </script>
+</body>
+</html>

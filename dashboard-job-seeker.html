@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard - Mummycare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <div class="top-bar-contact">
+                        <i data-lucide="phone"></i>
+                        <span>+267 123 4567</span>
+                    </div>
+                    <div class="top-bar-contact">
+                        <i data-lucide="mail"></i>
+                        <span>hello@mummycare.co.bw</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                    <div class="top-bar-announcement">
+                        Job Seeker Portal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header header-with-topbar">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i data-lucide="heart"></i>
+                    Mummycare
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard-job-seeker.html" class="active">My Dashboard</a></li>
+                    <li><a href="hire-pro.html">Browse Jobs</a></li>
+                    <li><a href="#">My Applications</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-secondary">Logout</a>
+                </div>
+                <button class="mobile-menu-toggle" title="Toggle mobile menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle" title="Toggle sidebar menu">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="user"></i>
+                    Job Seeker
+                </div>
+            </div>
+            
+            <div class="sidebar-user-info">
+                <div class="user-avatar">LM</div>
+                <div class="user-details">
+                    <h4>Lerato Mosienyane</h4>
+                    <p>Looking for Nanny Position</p>
+                    <div class="mt-1">
+                        <span class="badge badge-success" style="font-size: 0.7rem;">Available</span>
+                        <span class="badge badge-info" style="font-size: 0.7rem; margin-left: 5px;">3+ Years Exp</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">My Profile</div>
+                    <a href="#overview" class="nav-item active">
+                        <i data-lucide="home"></i>
+                        Overview
+                    </a>
+                    <a href="#profile" class="nav-item">
+                        <i data-lucide="user"></i>
+                        My Profile
+                    </a>
+                    <a href="#preferences" class="nav-item">
+                        <i data-lucide="settings"></i>
+                        Job Preferences
+                    </a>
+                    <a href="#availability" class="nav-item">
+                        <i data-lucide="calendar"></i>
+                        Availability
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Job Search</div>
+                    <a href="#applications" class="nav-item">
+                        <i data-lucide="send"></i>
+                        My Applications
+                        <span class="badge badge-warning" style="margin-left: auto;">3</span>
+                    </a>
+                    <a href="#interviews" class="nav-item">
+                        <i data-lucide="calendar"></i>
+                        Interviews
+                        <span class="badge badge-info" style="margin-left: auto;">1</span>
+                    </a>
+                    <a href="#offers" class="nav-item">
+                        <i data-lucide="gift"></i>
+                        Job Offers
+                    </a>
+                    <a href="#saved-jobs" class="nav-item">
+                        <i data-lucide="bookmark"></i>
+                        Saved Jobs
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Portfolio</div>
+                    <a href="#documents" class="nav-item">
+                        <i data-lucide="file-text"></i>
+                        Documents & CV
+                    </a>
+                    <a href="#references" class="nav-item">
+                        <i data-lucide="users"></i>
+                        References
+                    </a>
+                    <a href="#certifications" class="nav-item">
+                        <i data-lucide="award"></i>
+                        Certifications
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Communication</div>
+                    <a href="#messages" class="nav-item">
+                        <i data-lucide="message-circle"></i>
+                        Messages
+                        <span class="badge badge-warning" style="margin-left: auto;">2</span>
+                    </a>
+                    <a href="#notifications" class="nav-item">
+                        <i data-lucide="bell"></i>
+                        Notifications
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Welcome back, Lerato!</h1>
+                <p class="dashboard-subtitle">Track your applications, prepare for interviews, and find your perfect job</p>
+            </div>
+
+            <!-- Profile Completion Alert -->
+            <div class="dashboard-card" style="background: linear-gradient(135deg, var(--warning-color), #e68900); color: white; margin-bottom: 30px;">
+                <div class="card-content">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon" style="background: rgba(255,255,255,0.2); margin-right: 20px;">
+                            <i data-lucide="alert-circle"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 style="color: white; margin-bottom: 10px;">Complete Your Profile (75%)</h3>
+                            <p style="margin-bottom: 15px; opacity: 0.9;">Add your certifications and references to increase your chances of getting hired!</p>
+                            <button class="btn" style="background: white; color: var(--warning-color);">Complete Profile</button>
+                        </div>
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 1.2rem; font-weight: 700;">75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon primary">
+                            <i data-lucide="send"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Applications Sent</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon info">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Interviews Scheduled</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon success">
+                            <i data-lucide="gift"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">Job Offers</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon warning">
+                            <i data-lucide="eye"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">45</div>
+                    <div class="stat-label">Profile Views</div>
+                </div>
+            </div>
+
+            <!-- Job Preferences Summary -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">My Job Preferences</h3>
+                    <button class="btn btn-secondary btn-small">Edit Preferences</button>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: var(--border-radius);">
+                            <i data-lucide="briefcase" style="width: 24px; height: 24px; color: var(--primary-color); margin-bottom: 10px;"></i>
+                            <h4>Job Types</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Nanny, Babysitter</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: var(--border-radius);">
+                            <i data-lucide="map-pin" style="width: 24px; height: 24px; color: var(--primary-color); margin-bottom: 10px;"></i>
+                            <h4>Location</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Gaborone Area</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: var(--border-radius);">
+                            <i data-lucide="dollar-sign" style="width: 24px; height: 24px; color: var(--primary-color); margin-bottom: 10px;"></i>
+                            <h4>Salary Range</h4>
+                            <p style="font-size: 0.9rem; color: #666;">P3,000 - P4,500</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: var(--border-radius);">
+                            <i data-lucide="clock" style="width: 24px; height: 24px; color: var(--primary-color); margin-bottom: 10px;"></i>
+                            <h4>Work Type</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Full-time, Live-in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Applications -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Applications</h3>
+                    <button class="btn btn-accent btn-small">
+                        <i data-lucide="search"></i>
+                        Browse Jobs
+                    </button>
+                </div>
+                <div class="card-content">
+                    <div class="table-container">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Employer</th>
+                                    <th>Location</th>
+                                    <th>Salary</th>
+                                    <th>Applied</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>Live-in Nanny</strong><br>
+                                        <small>2 children (3, 5 years)</small>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar" style="width: 35px; height: 35px; font-size: 0.9rem; margin-right: 10px;">SM</div>
+                                            <div>
+                                                <strong>Sarah Mokgwebi</strong><br>
+                                                <small>Family of 4</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gaborone</td>
+                                    <td>P4,200/month</td>
+                                    <td>2 hours ago</td>
+                                    <td><span class="badge badge-info">Under Review</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">View</button>
+                                            <button class="btn btn-secondary btn-small" title="Send message">
+                                                <i data-lucide="message-circle"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Part-time Babysitter</strong><br>
+                                        <small>1 child (4 years)</small>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar" style="width: 35px; height: 35px; font-size: 0.9rem; margin-right: 10px;">TM</div>
+                                            <div>
+                                                <strong>Thabo Mmusi</strong><br>
+                                                <small>Single parent</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gaborone</td>
+                                    <td>P150/hour</td>
+                                    <td>1 day ago</td>
+                                    <td><span class="badge badge-success">Interview Scheduled</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-success btn-small">Interview Details</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Weekend Nanny</strong><br>
+                                        <small>3 children (2, 4, 6 years)</small>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar" style="width: 35px; height: 35px; font-size: 0.9rem; margin-right: 10px;">LK</div>
+                                            <div>
+                                                <strong>Lerato Kgosana</strong><br>
+                                                <small>Working mother</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Gaborone</td>
+                                    <td>P2,800/month</td>
+                                    <td>3 days ago</td>
+                                    <td><span class="badge badge-warning">Awaiting Response</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">View</button>
+                                            <button class="btn btn-secondary btn-small" title="Send message">
+                                                <i data-lucide="message-circle"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Interviews -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Upcoming Interviews</h3>
+                    <button class="btn btn-secondary btn-small">Interview Tips</button>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Babysitter Interview</h4>
+                                    <span class="badge badge-success">Tomorrow</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="user-avatar" style="width: 35px; height: 35px; margin-right: 10px;">TM</div>
+                                    <div>
+                                        <strong>Thabo Mmusi</strong><br>
+                                        <small>+267 123 4567</small>
+                                    </div>
+                                </div>
+                                <p class="mb-2"><strong>Date:</strong> Tomorrow, January 16, 2024</p>
+                                <p class="mb-2"><strong>Time:</strong> 10:00 AM</p>
+                                <p class="mb-3"><strong>Type:</strong> In-person at home</p>
+                                <p class="mb-3" style="font-size: 0.9rem; color: #666;">
+                                    "Please bring references and be prepared to discuss your experience with children."
+                                </p>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-small">Get Directions</button>
+                                    <button class="btn btn-secondary btn-small">Reschedule</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="border: 2px dashed #ccc; background: #f9f9f9;">
+                            <div class="card-content" style="text-align: center; padding: 40px 20px;">
+                                <i data-lucide="calendar-plus" style="width: 48px; height: 48px; color: #ccc; margin-bottom: 15px;"></i>
+                                <h4 style="color: #666; margin-bottom: 10px;">No More Interviews</h4>
+                                <p style="color: #999; margin-bottom: 20px;">Keep applying to get more interview opportunities!</p>
+                                <button class="btn btn-accent btn-small">Browse Jobs</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Recommendations -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Recommended Jobs for You</h3>
+                    <button class="btn btn-secondary btn-small">View All</button>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>After School Nanny</h4>
+                                    <span class="badge badge-info">New</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="user-avatar" style="width: 35px; height: 35px; margin-right: 10px;">MK</div>
+                                    <div>
+                                        <strong>Maria Kgathi</strong><br>
+                                        <small>Gaborone • 2 children</small>
+                                    </div>
+                                </div>
+                                <p class="mb-2"><strong>Salary:</strong> P3,200/month</p>
+                                <p class="mb-2"><strong>Schedule:</strong> Mon-Fri, 3 PM - 7 PM</p>
+                                <p class="mb-3"><strong>Children:</strong> 6 & 8 years old</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <small><i data-lucide="clock" style="width: 14px; margin-right: 5px;"></i>Posted 2 hours ago</small>
+                                    <small><i data-lucide="users" style="width: 14px; margin-right: 5px;"></i>3 applicants</small>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn btn-accent btn-small">Apply Now</button>
+                                    <button class="btn btn-secondary btn-small" title="Save job">
+                                        <i data-lucide="bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Weekend Childcare</h4>
+                                    <span class="badge badge-warning">Urgent</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="user-avatar" style="width: 35px; height: 35px; margin-right: 10px;">PO</div>
+                                    <div>
+                                        <strong>Peter Ositile</strong><br>
+                                        <small>Gaborone • 1 child</small>
+                                    </div>
+                                </div>
+                                <p class="mb-2"><strong>Rate:</strong> P180/hour</p>
+                                <p class="mb-2"><strong>Schedule:</strong> Sat-Sun, 9 AM - 5 PM</p>
+                                <p class="mb-3"><strong>Child:</strong> 3 years old</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <small><i data-lucide="clock" style="width: 14px; margin-right: 5px;"></i>Posted 5 hours ago</small>
+                                    <small><i data-lucide="users" style="width: 14px; margin-right: 5px;"></i>1 applicant</small>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn btn-accent btn-small">Apply Now</button>
+                                    <button class="btn btn-secondary btn-small" title="Save job">
+                                        <i data-lucide="bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Messages -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Messages</h3>
+                    <button class="btn btn-secondary btn-small">View All Messages</button>
+                </div>
+                <div class="card-content">
+                    <div class="activity-list">
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">TM</div>
+                            <div class="flex-1">
+                                <strong>Thabo Mmusi</strong><br>
+                                <small>"Looking forward to meeting you tomorrow at 10 AM. Please bring your references."</small>
+                            </div>
+                            <div class="text-right">
+                                <small>3 hours ago</small><br>
+                                <span class="badge badge-warning">Unread</span>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">SM</div>
+                            <div class="flex-1">
+                                <strong>Sarah Mokgwebi</strong><br>
+                                <small>"Thank you for your application. We will review it and get back to you within 2 days."</small>
+                            </div>
+                            <div class="text-right">
+                                <small>1 day ago</small><br>
+                                <span class="badge badge-success">Read</span>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="stat-icon primary" style="width: 40px; height: 40px; margin-right: 15px;">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <div class="flex-1">
+                                <strong>Mummycare Team</strong><br>
+                                <small>"Complete your profile to increase your chances of getting hired by 60%!"</small>
+                            </div>
+                            <div class="text-right">
+                                <small>2 days ago</small><br>
+                                <span class="badge badge-info">System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+        const sidebar = document.querySelector('.dashboard-sidebar');
+        
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar.classList.toggle('mobile-active');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992 && 
+                !sidebar.contains(e.target) && 
+                !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('mobile-active');
+            }
+        });
+
+        // Mobile menu toggle for main navigation
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-active');
+        });
+    </script>
+</body>
+</html>

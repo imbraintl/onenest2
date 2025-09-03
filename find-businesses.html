@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneNest Botswana - Find Businesses</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <div class="top-bar-contact">
+                        <i data-lucide="phone"></i>
+                        <span>+267 7123 4567</span>
+                    </div>
+                    <div class="top-bar-contact">
+                        <i data-lucide="mail"></i>
+                        <span>info@onenest.co.bw</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-announcement">
+                        Join 10,000+ verified members!
+                    </div>
+                    <div class="top-bar-social">
+                        <a href="#" aria-label="Facebook">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header header-with-topbar">
+        <div class="container">
+            <nav class="navbar">
+                <a class="logo" href="index.html">
+                    <i data-lucide="home"></i> OneNest
+                </a>
+                <ul class="nav-links">
+                    <li><a href="hire-pro.html">Hire a Pro</a></li>
+                    <li><a href="shop-goods.html">Shop Goods</a></li>
+                    <li><a href="find-businesses.html" class="active">Find Businesses</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a class="btn btn-secondary" data-page="page-login">Login</a>
+                    <a class="btn btn-primary" data-page="page-join">Join Now</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="page-container">
+        <section id="page-businesses" class="page active">
+             <div class="page-header">
+                <h1>Find Verified Businesses</h1>
+                <p>Discover reputable companies, restaurants, and services operating in Botswana.</p>
+            </div>
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <input type="text" placeholder="e.g., Choppies, Orange, Law Firm">
+                    </div>
+                    <div class="filter-group">
+                        <select>
+                            <option>All Industries</option>
+                            <option>Retail</option>
+                            <option>Restaurants & Cafes</option>
+                            <option>Professional Services</option>
+                            <option>Tourism & Lodges</option>
+                            <option>Telecommunications</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select>
+                            <option>All Locations</option>
+                            <option>Gaborone</option>
+                            <option>Francistown</option>
+                            <option>Maun</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="results-grid">
+                    <div class="card"> <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=60" alt="Restaurant"> <div class="card-content"> <span class="card-tag" style="background-color: #B2DFDB;">Restaurant</span> <h4 class="card-title">The Gaborone Grill</h4> <p class="card-subtitle">CBD, Gaborone</p> <div class="card-footer"> <div class="rating"> <i data-lucide="star" class="star-filled"></i> 4.7 (150 reviews) </div> <a class="btn btn-secondary" style="padding: 8px 16px;">View Details</a> </div> </div> </div>
+                    <div class="card"> <img src="https://images.unsplash.com/photo-1556761175-b413da4b248a?auto=format&fit=crop&w=800&q=60" alt="Law Firm"> <div class="card-content"> <span class="card-tag" style="background-color: #B2DFDB;">Professional Services</span> <h4 class="card-title">Armstrongs Attorneys</h4> <p class="card-subtitle">Corporate Law - Gaborone</p> <div class="card-footer"> <div class="rating"> <i data-lucide="star" class="star-filled"></i> 4.9 (Verified) </div> <a class="btn btn-secondary" style="padding: 8px 16px;">View Details</a> </div> </div> </div>
+                    <div class="card"> <img src="https://images.unsplash.com/photo-1562235942-7e44a436916e?auto=format&fit=crop&w=800&q=60" alt="Lodge"> <div class="card-content"> <span class="card-tag" style="background-color: #B2DFDB;">Tourism & Lodges</span> <h4 class="card-title">Chobe Game Lodge</h4> <p class="card-subtitle">Kasane, Chobe National Park</p> <div class="card-footer"> <div class="rating"> <i data-lucide="star" class="star-filled"></i> 5.0 (432 reviews) </div> <a class="btn btn-secondary" style="padding: 8px 16px;">View Details</a> </div> </div> </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"> <a class="logo" href="index.html"> <i data-lucide="home"></i> OneNest </a> <p>Verified Commerce. Local Trust.</p> <div class="social-links"> <a href="#"><i data-lucide="twitter"></i></a> <a href="#"><i data-lucide="instagram"></i></a> <a href="#"><i data-lucide="linkedin"></i></a> </div> </div>
+                <div class="footer-col"> <h4>Explore</h4> <ul> <li><a href="hire-pro.html">Hire a Pro</a></li> <li><a href="shop-goods.html">Shop Goods</a></li> <li><a href="find-businesses.html">Find Businesses</a></li> </ul> </div>
+                <div class="footer-col"> <h4>About</h4> <ul> <li><a href="#">About Us</a></li> <li><a href="#">Careers</a></li> <li><a href="#">Press</a></li> </ul> </div>
+                <div class="footer-col"> <h4>Support</h4> <ul> <li><a href="how-it-works.html">Help & FAQ</a></li> <li><a href="#">Contact Us</a></li> <li><a href="#">Terms of Service</a></li> </ul> </div>
+            </div>
+            <div class="footer-bottom"> <p>&copy; 2024 OneNest Botswana. All rights reserved.</p> </div>
+        </div>
+    </footer>
+
+
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Embedded JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            const header = document.querySelector('.header');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinksContainer = document.querySelector('.nav-links');
+            let lastScrollTop = 0;
+
+            // Enhanced scroll behavior for sticky header
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 10) {
+                    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                }
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = scrollTop;
+            }
+
+            // Mobile menu toggle functionality
+            function toggleMobileMenu() {
+                navLinksContainer.classList.toggle('mobile-active');
+                const isOpen = navLinksContainer.classList.contains('mobile-active');
+                mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+            }
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            }
+
+            navLinksContainer.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinksContainer.classList.contains('mobile-active')) {
+                        navLinksContainer.classList.remove('mobile-active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
+</html>

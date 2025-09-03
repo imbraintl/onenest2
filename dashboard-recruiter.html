@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard - Mummycare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <div class="top-bar-contact">
+                        <i data-lucide="phone"></i>
+                        <span>+267 123 4567</span>
+                    </div>
+                    <div class="top-bar-contact">
+                        <i data-lucide="mail"></i>
+                        <span>hello@mummycare.co.bw</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                    <div class="top-bar-announcement">
+                        Recruiter Portal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header header-with-topbar">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i data-lucide="heart"></i>
+                    Mummycare
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard-recruiter.html" class="active">My Dashboard</a></li>
+                    <li><a href="hire-pro.html">Browse Candidates</a></li>
+                    <li><a href="#">My Subscription</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-secondary">Logout</a>
+                </div>
+                <button class="mobile-menu-toggle" title="Toggle mobile menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle" title="Toggle sidebar menu">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="briefcase"></i>
+                    Recruiter Portal
+                </div>
+            </div>
+            
+            <div class="sidebar-user-info">
+                <div class="user-avatar">TM</div>
+                <div class="user-details">
+                    <h4>Thabo Mmusi</h4>
+                    <p>Family Recruiter</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Recruitment</div>
+                    <a href="#overview" class="nav-item active">
+                        <i data-lucide="home"></i>
+                        Overview
+                    </a>
+                    <a href="#job-posts" class="nav-item">
+                        <i data-lucide="briefcase"></i>
+                        My Job Posts
+                    </a>
+                    <a href="#applications" class="nav-item">
+                        <i data-lucide="users"></i>
+                        Applications
+                        <span class="badge badge-warning" style="margin-left: auto;">5</span>
+                    </a>
+                    <a href="#interviews" class="nav-item">
+                        <i data-lucide="calendar"></i>
+                        Interviews
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Candidates</div>
+                    <a href="#shortlisted" class="nav-item">
+                        <i data-lucide="star"></i>
+                        Shortlisted
+                    </a>
+                    <a href="#hired" class="nav-item">
+                        <i data-lucide="user-check"></i>
+                        Hired Staff
+                    </a>
+                    <a href="#browse" class="nav-item">
+                        <i data-lucide="search"></i>
+                        Browse All
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Communication</div>
+                    <a href="#messages" class="nav-item">
+                        <i data-lucide="message-circle"></i>
+                        Messages
+                        <span class="badge badge-info" style="margin-left: auto;">3</span>
+                    </a>
+                    <a href="#team-interview" class="nav-item">
+                        <i data-lucide="phone"></i>
+                        Team Interviews
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Account</div>
+                    <a href="#subscription" class="nav-item">
+                        <i data-lucide="credit-card"></i>
+                        Subscription
+                    </a>
+                    <a href="#settings" class="nav-item">
+                        <i data-lucide="settings"></i>
+                        Settings
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Welcome back, Thabo!</h1>
+                <p class="dashboard-subtitle">Manage your recruitment activities and find the perfect candidates</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon primary">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Active Job Posts</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon warning">
+                            <i data-lucide="users"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">New Applications</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon info">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Interviews Scheduled</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon success">
+                            <i data-lucide="user-check"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Staff Hired</div>
+                </div>
+            </div>
+
+            <!-- Active Job Posts -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">My Active Job Posts</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-accent btn-small">
+                            <i data-lucide="plus"></i>
+                            Post New Job
+                        </button>
+                        <button class="btn btn-secondary btn-small">
+                            <i data-lucide="bar-chart"></i>
+                            View Analytics
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Live-in Nanny</h4>
+                                    <span class="badge badge-success">Active</span>
+                                </div>
+                                <p class="mb-2"><strong>Salary:</strong> P3,000 - P4,500/month</p>
+                                <p class="mb-2"><strong>Location:</strong> Gaborone</p>
+                                <p class="mb-3"><strong>Posted:</strong> 5 days ago</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span><i data-lucide="eye" style="width: 16px; margin-right: 5px;"></i>45 views</span>
+                                    <span><i data-lucide="users" style="width: 16px; margin-right: 5px;"></i>8 applications</span>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-small">View Applications</button>
+                                    <button class="btn btn-secondary btn-small">Edit Post</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Weekend Cleaner</h4>
+                                    <span class="badge badge-warning">Promoted</span>
+                                </div>
+                                <p class="mb-2"><strong>Salary:</strong> P1,500 - P2,000/month</p>
+                                <p class="mb-2"><strong>Location:</strong> Gaborone</p>
+                                <p class="mb-3"><strong>Posted:</strong> 2 days ago</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span><i data-lucide="eye" style="width: 16px; margin-right: 5px;"></i>23 views</span>
+                                    <span><i data-lucide="users" style="width: 16px; margin-right: 5px;"></i>4 applications</span>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-small">View Applications</button>
+                                    <button class="btn btn-secondary btn-small">Edit Post</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Elderly Care Assistant</h4>
+                                    <span class="badge badge-info">New</span>
+                                </div>
+                                <p class="mb-2"><strong>Salary:</strong> P4,000 - P6,000/month</p>
+                                <p class="mb-2"><strong>Location:</strong> Gaborone</p>
+                                <p class="mb-3"><strong>Posted:</strong> 1 day ago</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span><i data-lucide="eye" style="width: 16px; margin-right: 5px;"></i>12 views</span>
+                                    <span><i data-lucide="users" style="width: 16px; margin-right: 5px;"></i>0 applications</span>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-small">View Applications</button>
+                                    <button class="btn btn-secondary btn-small">Edit Post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Applications -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Applications</h3>
+                    <button class="btn btn-secondary btn-small">View All Applications</button>
+                </div>
+                <div class="card-content">
+                    <div class="table-container">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Candidate</th>
+                                    <th>Position Applied</th>
+                                    <th>Experience</th>
+                                    <th>Salary Expectation</th>
+                                    <th>Applied</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar" style="width: 35px; height: 35px; font-size: 0.9rem; margin-right: 10px;">LM</div>
+                                            <div>
+                                                <strong>Lerato Mosienyane</strong><br>
+                                                <small>Gaborone • 28 years old</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Live-in Nanny</td>
+                                    <td>3 years</td>
+                                    <td>P3,500/month</td>
+                                    <td>2 hours ago</td>
+                                    <td><span class="badge badge-warning">New</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">Review</button>
+                                            <button class="btn btn-secondary btn-small" title="Send message">
+                                                <i data-lucide="message-circle"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar" style="width: 35px; height: 35px; font-size: 0.9rem; margin-right: 10px;">TK</div>
+                                            <div>
+                                                <strong>Tebogo Kgosana</strong><br>
+                                                <small>Francistown • 35 years old</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Weekend Cleaner</td>
+                                    <td>5 years</td>
+                                    <td>P1,800/month</td>
+                                    <td>5 hours ago</td>
+                                    <td><span class="badge badge-info">Reviewed</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-success btn-small">Interview</button>
+                                            <button class="btn btn-secondary btn-small" title="Send message">
+                                                <i data-lucide="message-circle"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="user-avatar" style="width: 35px; height: 35px; font-size: 0.9rem; margin-right: 10px;">MM</div>
+                                            <div>
+                                                <strong>Mpho Mogale</strong><br>
+                                                <small>Gaborone • 42 years old</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Elderly Care Assistant</td>
+                                    <td>8 years</td>
+                                    <td>P5,000/month</td>
+                                    <td>1 day ago</td>
+                                    <td><span class="badge badge-success">Shortlisted</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-accent btn-small">Hire</button>
+                                            <button class="btn btn-secondary btn-small" title="Send message">
+                                                <i data-lucide="message-circle"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interview Support Notice -->
+            <div class="dashboard-card" style="background: linear-gradient(135deg, var(--accent-color), var(--primary-color)); color: white;">
+                <div class="card-content">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon" style="background: rgba(255,255,255,0.2); margin-right: 20px;">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 style="color: white; margin-bottom: 10px;">Need Help with Interviews?</h3>
+                            <p style="margin-bottom: 20px; opacity: 0.9;">Our team can conduct interviews for you! Professional screening and evaluation of candidates to ensure you find the perfect fit for your family.</p>
+                            <button class="btn" style="background: white; color: var(--primary-color);">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Status -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Subscription Status</h3>
+                    <button class="btn btn-secondary btn-small">Manage Subscription</button>
+                </div>
+                <div class="card-content">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <h4>Monthly Premium Plan</h4>
+                            <p class="mb-2">Unlimited job posts • Priority candidate access • Interview support</p>
+                            <p><strong>Next billing:</strong> February 15, 2024</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="stat-value" style="font-size: 1.5rem;">P299</div>
+                            <div class="stat-label">per month</div>
+                            <span class="badge badge-success">Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+        const sidebar = document.querySelector('.dashboard-sidebar');
+        
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar.classList.toggle('mobile-active');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992 && 
+                !sidebar.contains(e.target) && 
+                !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('mobile-active');
+            }
+        });
+
+        // Mobile menu toggle for main navigation
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-active');
+        });
+    </script>
+</body>
+</html>

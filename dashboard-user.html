@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Mummycare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <div class="top-bar-contact">
+                        <i data-lucide="phone"></i>
+                        <span>+267 123 4567</span>
+                    </div>
+                    <div class="top-bar-contact">
+                        <i data-lucide="mail"></i>
+                        <span>hello@mummycare.co.bw</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                    <div class="top-bar-announcement">
+                        Welcome Back!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header header-with-topbar">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i data-lucide="heart"></i>
+                    Mummycare
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hire-pro.html">Hire Professional</a></li>
+                    <li><a href="shop-goods.html">Shop Goods</a></li>
+                    <li><a href="find-businesses.html">Find Businesses</a></li>
+                    <li><a href="dashboard-user.html" class="active">My Dashboard</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-secondary">Logout</a>
+                </div>
+                <button class="mobile-menu-toggle" title="Toggle mobile menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle" title="Toggle sidebar menu">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="heart"></i>
+                    My Mummycare
+                </div>
+            </div>
+            
+            <div class="sidebar-user-info">
+                <div class="user-avatar">SM</div>
+                <div class="user-details">
+                    <h4>Sarah Mokgwebi</h4>
+                    <p>Gaborone, Botswana</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">My Account</div>
+                    <a href="#overview" class="nav-item active">
+                        <i data-lucide="home"></i>
+                        Overview
+                    </a>
+                    <a href="#profile" class="nav-item">
+                        <i data-lucide="user"></i>
+                        My Profile
+                    </a>
+                    <a href="#family" class="nav-item">
+                        <i data-lucide="users"></i>
+                        Family Details
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Services</div>
+                    <a href="#hired-services" class="nav-item">
+                        <i data-lucide="user-check"></i>
+                        Hired Services
+                    </a>
+                    <a href="#favorites" class="nav-item">
+                        <i data-lucide="heart"></i>
+                        Saved Providers
+                    </a>
+                    <a href="#requests" class="nav-item">
+                        <i data-lucide="clock"></i>
+                        Service Requests
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Shopping</div>
+                    <a href="#cart" class="nav-item">
+                        <i data-lucide="shopping-cart"></i>
+                        My Cart
+                        <span class="badge badge-info" style="margin-left: auto;">3</span>
+                    </a>
+                    <a href="#orders" class="nav-item">
+                        <i data-lucide="package"></i>
+                        My Orders
+                    </a>
+                    <a href="#wishlist" class="nav-item">
+                        <i data-lucide="bookmark"></i>
+                        Wishlist
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Communication</div>
+                    <a href="#messages" class="nav-item">
+                        <i data-lucide="message-circle"></i>
+                        Messages
+                        <span class="badge badge-warning" style="margin-left: auto;">2</span>
+                    </a>
+                    <a href="#notifications" class="nav-item">
+                        <i data-lucide="bell"></i>
+                        Notifications
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Welcome back, Sarah!</h1>
+                <p class="dashboard-subtitle">Here's what's happening with your Mummycare account</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon primary">
+                            <i data-lucide="user-check"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Active Services</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon success">
+                            <i data-lucide="shopping-bag"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Items in Cart</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon warning">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Unread Messages</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon info">
+                            <i data-lucide="heart"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Saved Items</div>
+                </div>
+            </div>
+
+            <!-- Active Services -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">My Active Services</h3>
+                    <a href="hire-pro.html" class="btn btn-accent btn-small">
+                        <i data-lucide="plus"></i>
+                        Hire New Service
+                    </a>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="user-avatar" style="margin-right: 15px;">MT</div>
+                                    <div class="flex-1">
+                                        <h4>Mary Tebogo</h4>
+                                        <p>Nanny</p>
+                                    </div>
+                                    <span class="badge badge-success">Active</span>
+                                </div>
+                                <p class="mb-2"><i data-lucide="clock" style="width: 16px; margin-right: 8px;"></i>Mon-Fri, 7:00 AM - 5:00 PM</p>
+                                <p class="mb-3"><i data-lucide="phone" style="width: 16px; margin-right: 8px;"></i>+267 123 4567</p>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-small">Contact</button>
+                                    <button class="btn btn-secondary btn-small">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="user-avatar" style="margin-right: 15px;">JM</div>
+                                    <div class="flex-1">
+                                        <h4>John Morapedi</h4>
+                                        <p>Cleaner</p>
+                                    </div>
+                                    <span class="badge badge-success">Active</span>
+                                </div>
+                                <p class="mb-2"><i data-lucide="clock" style="width: 16px; margin-right: 8px;"></i>Weekends, 8:00 AM - 4:00 PM</p>
+                                <p class="mb-3"><i data-lucide="phone" style="width: 16px; margin-right: 8px;"></i>+267 987 6543</p>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary btn-small">Contact</button>
+                                    <button class="btn btn-secondary btn-small">View Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shopping Cart Preview -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">My Shopping Cart</h3>
+                    <a href="shop-goods.html" class="btn btn-secondary btn-small">Continue Shopping</a>
+                </div>
+                <div class="card-content">
+                    <div class="table-container">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Seller</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Product" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>Baby Stroller</strong><br>
+                                                <small>Excellent condition</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Mary Tebogo</td>
+                                    <td>P850</td>
+                                    <td>1</td>
+                                    <td>P850</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-error btn-small" title="Remove item">
+                                                <i data-lucide="trash-2"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Product" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>Kids Wooden Toys</strong><br>
+                                                <small>Educational set</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Grace Modise</td>
+                                    <td>P450</td>
+                                    <td>1</td>
+                                    <td>P450</td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-error btn-small" title="Remove item">
+                                                <i data-lucide="trash-2"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="border-top: 2px solid var(--primary-color); font-weight: 600;">
+                                    <td colspan="4" style="text-align: right;">Total:</td>
+                                    <td>P1,300</td>
+                                    <td>
+                                        <button class="btn btn-accent btn-small">Checkout</button>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Messages -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Messages</h3>
+                    <button class="btn btn-secondary btn-small">View All</button>
+                </div>
+                <div class="card-content">
+                    <div class="activity-list">
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">MT</div>
+                            <div class="flex-1">
+                                <strong>Mary Tebogo</strong><br>
+                                <small>"I'll be a few minutes late today due to traffic. Sorry!"</small>
+                            </div>
+                            <div class="text-right">
+                                <small>2 hours ago</small><br>
+                                <span class="badge badge-warning">Unread</span>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">JM</div>
+                            <div class="flex-1">
+                                <strong>John Morapedi</strong><br>
+                                <small>"Cleaning completed. Have a great weekend!"</small>
+                            </div>
+                            <div class="text-right">
+                                <small>1 day ago</small><br>
+                                <span class="badge badge-success">Read</span>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="user-avatar" style="margin-right: 15px;">GT</div>
+                            <div class="flex-1">
+                                <strong>Grace Modise</strong><br>
+                                <small>"Thank you for your interest in the toys. They are still available."</small>
+                            </div>
+                            <div class="text-right">
+                                <small>2 days ago</small><br>
+                                <span class="badge badge-warning">Unread</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+        const sidebar = document.querySelector('.dashboard-sidebar');
+        
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar.classList.toggle('mobile-active');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992 && 
+                !sidebar.contains(e.target) && 
+                !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('mobile-active');
+            }
+        });
+
+        // Mobile menu toggle for main navigation
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Agent Dashboard - Mummycare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <div class="top-bar-contact">
+                        <i data-lucide="phone"></i>
+                        <span>+267 123 4567</span>
+                    </div>
+                    <div class="top-bar-contact">
+                        <i data-lucide="mail"></i>
+                        <span>hello@mummycare.co.bw</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-social">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                    <div class="top-bar-announcement">
+                        Property Agent Portal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header header-with-topbar">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i data-lucide="heart"></i>
+                    Mummycare
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard-property-agent.html" class="active">My Dashboard</a></li>
+                    <li><a href="#">Property Search</a></li>
+                    <li><a href="#">My Subscription</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-secondary">Logout</a>
+                </div>
+                <button class="mobile-menu-toggle" title="Toggle mobile menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Toggle -->
+    <button class="mobile-sidebar-toggle" title="Toggle sidebar menu">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="search"></i>
+                    Property Agent
+                </div>
+            </div>
+            
+            <div class="sidebar-user-info">
+                <div class="user-avatar">LK</div>
+                <div class="user-details">
+                    <h4>Lerato Kgosana</h4>
+                    <p>Property Agent</p>
+                    <div class="mt-1">
+                        <span class="badge badge-success" style="font-size: 0.7rem;">Premium Member</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Dashboard</div>
+                    <a href="#overview" class="nav-item active">
+                        <i data-lucide="home"></i>
+                        Overview
+                    </a>
+                    <a href="#search" class="nav-item">
+                        <i data-lucide="search"></i>
+                        Property Search
+                    </a>
+                    <a href="#saved" class="nav-item">
+                        <i data-lucide="bookmark"></i>
+                        Saved Properties
+                        <span class="badge badge-info" style="margin-left: auto;">12</span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Client Management</div>
+                    <a href="#clients" class="nav-item">
+                        <i data-lucide="users"></i>
+                        My Clients
+                    </a>
+                    <a href="#matches" class="nav-item">
+                        <i data-lucide="target"></i>
+                        Property Matches
+                        <span class="badge badge-warning" style="margin-left: auto;">8</span>
+                    </a>
+                    <a href="#viewings" class="nav-item">
+                        <i data-lucide="calendar"></i>
+                        Scheduled Viewings
+                        <span class="badge badge-success" style="margin-left: auto;">3</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Business Tools</div>
+                    <a href="#contacts" class="nav-item">
+                        <i data-lucide="phone"></i>
+                        Contact Requests
+                    </a>
+                    <a href="#commission" class="nav-item">
+                        <i data-lucide="dollar-sign"></i>
+                        Commission Tracker
+                    </a>
+                    <a href="#lead-gen" class="nav-item">
+                        <i data-lucide="zap"></i>
+                        Lead Generation
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Account</div>
+                    <a href="#subscription" class="nav-item">
+                        <i data-lucide="credit-card"></i>
+                        Subscription
+                    </a>
+                    <a href="#credits" class="nav-item">
+                        <i data-lucide="coins"></i>
+                        Access Credits
+                        <span class="badge badge-warning" style="margin-left: auto;">850</span>
+                    </a>
+                    <a href="#messages" class="nav-item">
+                        <i data-lucide="message-circle"></i>
+                        Messages
+                        <span class="badge badge-info" style="margin-left: auto;">4</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Welcome back, Lerato!</h1>
+                <p class="dashboard-subtitle">Find perfect properties for your clients and grow your business</p>
+            </div>
+
+            <!-- Subscription Status -->
+            <div class="dashboard-card" style="background: linear-gradient(135deg, var(--success-color), #45a049); color: white; margin-bottom: 30px;">
+                <div class="card-content">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon" style="background: rgba(255,255,255,0.2); margin-right: 20px;">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 style="color: white; margin-bottom: 10px;">Premium Subscription Active</h3>
+                            <p style="margin-bottom: 15px; opacity: 0.9;">Access to all property listings with owner contact details. Valid until February 15, 2024.</p>
+                            <button class="btn" style="background: white; color: var(--success-color);">Manage Subscription</button>
+                        </div>
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 1rem; font-weight: 700;">850<br><small style="font-size: 0.7rem;">credits</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon primary">
+                            <i data-lucide="home"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">Properties Accessed</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon success">
+                            <i data-lucide="users"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">23</div>
+                    <div class="stat-label">Active Clients</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon warning">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Viewings This Week</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <div class="stat-icon info">
+                            <i data-lucide="dollar-sign"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">P42K</div>
+                    <div class="stat-label">Potential Commission</div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Quick Actions</h3>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <button class="btn btn-accent" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="search" style="width: 24px; height: 24px;"></i>
+                            <span>Search Properties</span>
+                        </button>
+                        <button class="btn btn-primary" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="plus" style="width: 24px; height: 24px;"></i>
+                            <span>Add New Client</span>
+                        </button>
+                        <button class="btn btn-secondary" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="calendar" style="width: 24px; height: 24px;"></i>
+                            <span>Schedule Viewing</span>
+                        </button>
+                        <button class="btn btn-success" style="padding: 20px; height: auto; flex-direction: column; gap: 10px;">
+                            <i data-lucide="coins" style="width: 24px; height: 24px;"></i>
+                            <span>Buy Access Credits</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Property Searches -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Property Searches</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-accent btn-small">
+                            <i data-lucide="search"></i>
+                            New Search
+                        </button>
+                        <button class="btn btn-secondary btn-small">
+                            <i data-lucide="bookmark"></i>
+                            Saved Searches
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="table-container">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th>Type</th>
+                                    <th>Price</th>
+                                    <th>Location</th>
+                                    <th>Owner</th>
+                                    <th>Access Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Property" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>3BR House - Gaborone West</strong><br>
+                                                <small>Modern family home with garden</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>For Rent</td>
+                                    <td>P8,500/month</td>
+                                    <td>Gaborone West</td>
+                                    <td>
+                                        <strong>Kgotla Mogale</strong><br>
+                                        <small>+267 *** ****</small>
+                                    </td>
+                                    <td><span class="badge badge-success">Contact Accessed</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">View Details</button>
+                                            <button class="btn btn-secondary btn-small" title="Contact owner">
+                                                <i data-lucide="phone"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Property" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>2BR Apartment - Block 8</strong><br>
+                                                <small>Secure complex with parking</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>For Rent</td>
+                                    <td>P4,200/month</td>
+                                    <td>Gaborone</td>
+                                    <td>
+                                        <strong>Contact for P10</strong><br>
+                                        <small>Access required</small>
+                                    </td>
+                                    <td><span class="badge badge-warning">Access Required</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-accent btn-small">Access Contact (P10)</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMiAyOEwyOCAxMk0xMiAxMkwyOCAyOCIgc3Ryb2tlPSIjOUNBM0FGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" 
+                                                 alt="Property" style="width: 40px; height: 40px; border-radius: 4px; margin-right: 10px;">
+                                            <div>
+                                                <strong>4BR House - Phakalane</strong><br>
+                                                <small>Executive home in golf estate</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>For Sale</td>
+                                    <td>P1,850,000</td>
+                                    <td>Phakalane</td>
+                                    <td>
+                                        <strong>Peter Ositile</strong><br>
+                                        <small>+267 987 6543</small>
+                                    </td>
+                                    <td><span class="badge badge-success">Contact Accessed</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-primary btn-small">View Details</button>
+                                            <button class="btn btn-secondary btn-small" title="Contact owner">
+                                                <i data-lucide="phone"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Matches -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Property Matches for Clients</h3>
+                    <button class="btn btn-secondary btn-small">View All Matches</button>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Client Match Found</h4>
+                                    <span class="badge badge-success">95% Match</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="user-avatar" style="width: 35px; height: 35px; margin-right: 10px;">SM</div>
+                                    <div>
+                                        <strong>Sarah Mokgwebi</strong><br>
+                                        <small>Looking for 3BR house, P8,000-P10,000</small>
+                                    </div>
+                                </div>
+                                <p class="mb-2"><strong>Property:</strong> 3BR House - Gaborone West</p>
+                                <p class="mb-2"><strong>Price:</strong> P8,500/month</p>
+                                <p class="mb-3"><strong>Match Score:</strong> Budget ✓ Location ✓ Size ✓</p>
+                                <div class="action-buttons">
+                                    <button class="btn btn-accent btn-small">Contact Client</button>
+                                    <button class="btn btn-secondary btn-small">Schedule Viewing</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Client Match Found</h4>
+                                    <span class="badge badge-warning">80% Match</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="user-avatar" style="width: 35px; height: 35px; margin-right: 10px;">TM</div>
+                                    <div>
+                                        <strong>Thabo Mmusi</strong><br>
+                                        <small>Looking for 2BR apartment, P4,000-P5,000</small>
+                                    </div>
+                                </div>
+                                <p class="mb-2"><strong>Property:</strong> 2BR Apartment - Block 8</p>
+                                <p class="mb-2"><strong>Price:</strong> P4,200/month</p>
+                                <p class="mb-3"><strong>Match Score:</strong> Budget ✓ Size ✓ Security ✓</p>
+                                <div class="action-buttons">
+                                    <button class="btn btn-accent btn-small">Access Contact (P10)</button>
+                                    <button class="btn btn-secondary btn-small">Save for Later</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Performance -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Business Performance</h3>
+                    <button class="btn btn-secondary btn-small">Detailed Report</button>
+                </div>
+                <div class="card-content">
+                    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                        <div style="background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Properties Accessed</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">156</div>
+                            <small style="opacity: 0.9;">This month</small>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, var(--success-color), #45a049); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Successful Matches</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">12</div>
+                            <small style="opacity: 0.9;">Client-property matches</small>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, var(--warning-color), #e68900); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Credits Used</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">150</div>
+                            <small style="opacity: 0.9;">850 remaining</small>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, var(--accent-color), #00a794); color: white; padding: 20px; border-radius: var(--border-radius);">
+                            <h4 style="color: white; margin-bottom: 10px;">Commission Pipeline</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 5px;">P42K</div>
+                            <small style="opacity: 0.9;">Potential earnings</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scheduled Viewings -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Upcoming Property Viewings</h3>
+                    <button class="btn btn-secondary btn-small">Manage Calendar</button>
+                </div>
+                <div class="card-content">
+                    <div class="activity-list">
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="stat-icon info" style="width: 40px; height: 40px; margin-right: 15px;">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <div class="flex-1">
+                                <strong>Property Viewing - 3BR House, Gaborone West</strong><br>
+                                <small>Client: Sarah Mokgwebi • Tomorrow 2:00 PM • Owner: Kgotla Mogale</small>
+                            </div>
+                            <div class="text-right">
+                                <span class="badge badge-info">Tomorrow</span><br>
+                                <button class="btn btn-primary btn-small mt-1">View Details</button>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="stat-icon warning" style="width: 40px; height: 40px; margin-right: 15px;">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <div class="flex-1">
+                                <strong>Property Viewing - 2BR Apartment, Block 8</strong><br>
+                                <small>Client: Thabo Mmusi • Saturday 10:00 AM • Owner: Kgotla Mogale</small>
+                            </div>
+                            <div class="text-right">
+                                <span class="badge badge-warning">This Weekend</span><br>
+                                <button class="btn btn-primary btn-small mt-1">View Details</button>
+                            </div>
+                        </div>
+                        <div class="activity-item d-flex align-items-center mb-3">
+                            <div class="stat-icon success" style="width: 40px; height: 40px; margin-right: 15px;">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <div class="flex-1">
+                                <strong>Property Viewing - 4BR House, Phakalane</strong><br>
+                                <small>Client: Maria Kgathi • Monday 4:00 PM • Owner: Peter Ositile</small>
+                            </div>
+                            <div class="text-right">
+                                <span class="badge badge-success">Next Week</span><br>
+                                <button class="btn btn-primary btn-small mt-1">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Access Credits & Subscription -->
+            <div class="dashboard-card" style="background: linear-gradient(135deg, var(--accent-color), var(--primary-color)); color: white;">
+                <div class="card-content">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon" style="background: rgba(255,255,255,0.2); margin-right: 20px;">
+                            <i data-lucide="coins"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 style="color: white; margin-bottom: 10px;">Access More Properties</h3>
+                            <p style="margin-bottom: 20px; opacity: 0.9;">You have 850 access credits remaining. Each property contact costs 10 credits. Buy more credits or upgrade your subscription for unlimited access!</p>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn" style="background: white; color: var(--primary-color);">Buy Credits</button>
+                                <button class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid white;">Upgrade Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile sidebar toggle
+        const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+        const sidebar = document.querySelector('.dashboard-sidebar');
+        
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar.classList.toggle('mobile-active');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992 && 
+                !sidebar.contains(e.target) && 
+                !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('mobile-active');
+            }
+        });
+
+        // Mobile menu toggle for main navigation
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-active');
+        });
+    </script>
+</body>
+</html>
