@@ -90,6 +90,23 @@ class AuthController
 
         // Create user
         $userId = User::create([
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'password' => $password,
+            'role_flags' => ['user']
+        ]);
+
+        // Start session and store user data
+        session_start();
+        $_SESSION['user_id'] = $userId;
+        $_SESSION['user_name'] = $name;
+        $_SESSION['user_email'] = $email;
+        $_SESSION['role_flags'] = ['user'];
+
+        // Redirect to user dashboard
+        header('Location: /dashboard/user');
+        exit;
     }
 
     public function logout(): void
