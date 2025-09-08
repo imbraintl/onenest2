@@ -69,6 +69,24 @@ $router->get('/dashboard/property-agent', [DashboardController::class, 'property
 $router->get('/dashboard/seller', [DashboardController::class, 'sellerDashboard']);
 $router->get('/dashboard/admin', [DashboardController::class, 'adminDashboard']);
 
+// Registration form routes
+use App\Controllers\RegistrationController;
+$router->get('/register/service-provider', [RegistrationController::class, 'showServiceProviderForm']);
+$router->post('/register/service-provider', [RegistrationController::class, 'registerServiceProvider']);
+$router->get('/register/product-seller', [RegistrationController::class, 'showProductSellerForm']);
+$router->post('/register/product-seller', [RegistrationController::class, 'registerProductSeller']);
+$router->get('/register/marketplace-seller', [RegistrationController::class, 'showMarketplaceSellerForm']);
+$router->post('/register/marketplace-seller', [RegistrationController::class, 'registerMarketplaceSeller']);
+$router->get('/register/property-listing', [RegistrationController::class, 'showPropertyListingForm']);
+$router->post('/register/property-listing', [RegistrationController::class, 'registerPropertyListing']);
+$router->get('/register/job-seeker', [RegistrationController::class, 'showJobSeekerForm']);
+$router->post('/register/job-seeker', [RegistrationController::class, 'registerJobSeeker']);
+
+// Profile routes
+use App\Controllers\ProfileController;
+$router->get('/profile', [ProfileController::class, 'showProfile']);
+$router->post('/profile/update', [ProfileController::class, 'updateProfile']);
+
 // Public listing routes (using HomeController for now)
 $router->get('/businesses', [HomeController::class, 'businesses']);
 $router->get('/marketplace', [HomeController::class, 'marketplace']);
