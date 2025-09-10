@@ -319,61 +319,6 @@
 .nav-links a:hover::after, .nav-links a.active::after { 
     width: 100%; 
 }
-
-/* Navigation Dropdown */
-.nav-dropdown {
-    position: relative;
-}
-
-.nav-dropdown-toggle {
-    display: flex;
-    align-items: center;
-}
-
-.nav-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--white);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: var(--border-radius);
-    padding: 10px 0;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    list-style: none;
-}
-
-.nav-dropdown:hover .nav-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.nav-dropdown-menu li {
-    margin: 0;
-}
-
-.nav-dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    border-radius: 0;
-}
-
-.nav-dropdown-menu a:hover {
-    background-color: var(--light-gray);
-}
-
-.nav-dropdown-menu a::after {
-    display: none;
-}
-
 .nav-actions { 
     display: flex; 
     gap: 15px; 

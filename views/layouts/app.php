@@ -62,16 +62,6 @@
                     <li><a href="/how-it-works">How It Works</a></li>
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <li><a href="/dashboard/user">My Dashboard</a></li>
-                        <li class="nav-dropdown">
-                            <a href="#" class="nav-dropdown-toggle">Register Business <i data-lucide="chevron-down" style="width: 16px; height: 16px; margin-left: 5px;"></i></a>
-                            <ul class="nav-dropdown-menu">
-                                <li><a href="/register/service-provider">Service Provider</a></li>
-                                <li><a href="/register/product-seller">Product Seller</a></li>
-                                <li><a href="/register/marketplace-seller">Marketplace Seller</a></li>
-                                <li><a href="/register/property-listing">List Property</a></li>
-                                <li><a href="/register/job-seeker">Job Seeker Profile</a></li>
-                            </ul>
-                        </li>
                     <?php endif; ?>
                 </ul>
                 <div class="nav-actions">
